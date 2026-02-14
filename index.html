@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CE_IPsa | A Development Model for Circular Economy between Industrial Parks and Surroundings Areas</title>
+    <meta name="description" content="PRIN 2022 PNRR Research Project developing a Circular Economy model for Industrial Parks and surrounding areas, with the Fosso Imperatore case study.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a5c2a'/%3E%3Ctext x='50' y='62' font-family='Georgia' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECE%3C/text%3E%3C/svg%3E">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Stile per i codici CUP nell'hero */
+        .hero-cup-codes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .cup-item {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.02em;
+        }
+        
+        .cup-item strong {
+            color: #D4AF37;
+            font-weight: 600;
+        }
+        
+        .cup-divider {
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 300;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-cup-codes {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+            
+            .cup-divider {
+                display: none;
+            }
+            
+            .cup-item {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-logo-bar">
+    <div class="top-logo-bar-container">
+        <img src="images/logos/logo1.png" alt="Funded by EU">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo2.png" alt="MUR">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo3.png" alt="Italia Domani">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo5.png" alt="University of Naples L'Orientale">
+        <img src="images/logos/logo4.png" alt="University of Messina">
+    </div>
+</div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-main">
+                    <span class="logo-text">CE_IPsa</span>
+                    <span class="logo-badge">PRIN 2022 PNRR</span>
+                </div>
+                <div class="logo-codes">
+                    <span class="code-item">Project: P20227NFA4;</span>
+                    <span class="code-item">CUP UniOr: C53D23008770001</span>
+                    <span class="code-divider">-</span>
+                    <span class="code-item">CUP UniMe: J53D23016630001</span>
+                </div>
+            </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Dissemination
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="publications.html">Publications</a>
+                        <a href="conferences.html">Conferences</a>
+                        <a href="special-issue.html">Special Issue</a>
+                    </div>
+                </li>
+                <li><a href="contacts.html">Contact Us</a></li>
+            </ul>
+            
+            <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-slide active" style="background-image: url('images/slides/slide1.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/slides/slide2.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/slides/slide3.jpg');"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1>CE_IPsa</h1>
+
+            <p class="hero-subtitle">A Development Model for Circular Economy between Industrial Parks and Surroundings Areas</p>
+
+            <p class="hero-description">
+                 Studying IS and CE implementation to increase resource efficiency, environmental and social sustainability and economic competitiveness in production areas.
+            </p>
+
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                </svg>
+                PRIN 2022 PNRR &bull; Identification Code: P20227NFA4
+            </div>
+
+            <div class="hero-cup-codes">
+                <span class="cup-item"><strong>CUP UniOr:</strong> C53D23008770001</span>
+                <span class="cup-divider">|</span>
+                <span class="cup-item"><strong>CUP UniMe:</strong> J53D23016630001</span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#project" class="btn btn-primary">
+                    Discover the Project
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="publications.html" class="btn btn-outline">
+                    View Publications
+                </a>
+            </div>
+        </div>
+        
+        <div class="slide-indicators">
+            <button class="slide-indicator active" data-slide="0"></button>
+            <button class="slide-indicator" data-slide="1"></button>
+            <button class="slide-indicator" data-slide="2"></button>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Project Section -->
+    <section class="section" id="project">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">About the Research</span>
+                <h2 class="section-title">The Project</h2>
+                <p class="section-subtitle">
+                    Fostering circular economy and industrial symbiosis in Italian production areas
+                </p>
+            </div>
+
+            <!-- Image Carousel -->
+            <div class="image-carousel">
+                <div class="carousel-track">
+                    <img src="images/carrellata/WhatsApp%20Image%202026-02-12%20at%2012.35.38.jpeg" alt="Project image 1">
+                    <img src="images/carrellata/WhatsApp%20Image%202026-02-12%20at%2012.35.40.jpeg" alt="Project image 2">
+                    <img src="images/carrellata/WhatsApp%20Image%202026-02-12%20at%2012.35.42.jpeg" alt="Project image 3">
+                    <img src="images/carrellata/WhatsApp%20Image%202026-02-12%20at%2012.35.42%20(1).jpeg" alt="Project image 4">
+                    <img src="images/carrellata/WhatsApp%20Image%202026-02-12%20at%2012.35.42%20(2).jpeg" alt="Project image 5">
+                    <!-- Duplicati per loop continuo -->
+                    <img src="images/carrellata/WhatsApp%20Image%202026-02-12%20at%2012.35.38.jpeg" alt="Project image 1">
+                    <img src="images/carrellata/WhatsApp%20Image%202026-02-12%20at%2012.35.40.jpeg" alt="Project image 2">
+                    <img src="images/carrellata/WhatsApp%20Image%202026-02-12%20at%2012.35.42.jpeg" alt="Project image 3">
+                    <img src="images/carrellata/WhatsApp%20Image%202026-02-12%20at%2012.35.42%20(1).jpeg" alt="Project image 4">
+                    <img src="images/carrellata/WhatsApp%20Image%202026-02-12%20at%2012.35.42%20(2).jpeg" alt="Project image 5">
+                </div>
+            </div>
+
+            <div class="project-grid">
+                <div class="project-content">
+                    
+<h3>Circular Economy for Industrial Parks</h3>
+<p class="project-description">
+    The <strong>CE_IPsa</strong> project studies Industrial Symbiosis (IS) and Circular Economy (CE) implementation 
+    to increase resource efficiency, environmental and social sustainability and economic competitiveness in 
+    production areas. It aims at building a Development Model for industrial parks (IPs), deriving from the 
+    combination of different research (Grounded Theory) and evaluation methodologies (Cost-Benefit Analysis, 
+    Multi-objective optimisation techniques).
+</p>
+<p class="project-description">
+    Through a deep knowledge of the resource flows within industrial parks and in their surroundings, the transition 
+    from a linear metabolism to a circular one becomes more feasible. The industrial park becomes the reference subject 
+    with its resource inflows and outflows, while the surrounding context becomes the potential provider of secondary 
+    raw materials and the destination of several by-products (re-use, instead of disposal).
+    The project involves five main steps: 
+    <strong>(1)</strong> Theoretical overview of the literature on planning, monitoring and evaluation methodologies of IS/CE;
+    <strong>(2)</strong> Analysis and mapping of the production fabric of a selected IP and the surrounding area;
+    <strong>(3)</strong> Definition of the Development Model;
+    <strong>(4)</strong> Definition of the Development Plan; and
+    <strong>(5)</strong> Construction of a Decision Support System for supporting policymakers and entrepreneurs.
+</p>
+
+                    
+                </div>
+                
+                <div class="features-card">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                        Research Activities
+                    </h3>
+                    <div class="feature-list">
+    <div class="feature-item">
+        <div class="feature-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+        </div>
+        <span class="feature-text"><strong>RA1</strong> &mdash; Theoretical Literature Review</span>
+    </div>
+    <div class="feature-item">
+        <div class="feature-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+        </div>
+        <span class="feature-text"><strong>RA2</strong> &mdash; Context Analysis</span>
+    </div>
+    <div class="feature-item">
+        <div class="feature-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+        </div>
+        <span class="feature-text"><strong>RA3</strong> &mdash; Definition of the Development Model</span>
+    </div>
+    <div class="feature-item">
+        <div class="feature-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+        </div>
+        <span class="feature-text"><strong>RA4</strong> &mdash; Definition of the Development Plan</span>
+    </div>
+    <div class="feature-item">
+        <div class="feature-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+        </div>
+        <span class="feature-text"><strong>RA5</strong> &mdash; DSS Development</span>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">&euro;266K</div>
+                    <div class="stat-label">Total Funding</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Research Units</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Researchers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Publications</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="section" id="casestudy">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Case Study</span>
+                <h2 class="section-title">Fosso Imperatore Industrial Park</h2>
+                <p class="section-subtitle">
+                    Exploring circular economy and industrial symbiosis potential in a Southern Italian production area
+                </p>
+            </div>
+            
+            <div class="casestudy-grid">
+                <!-- Slideshow -->
+                <div class="casestudy-slideshow">
+                    <div class="casestudy-slide active" style="background-image: url('images/slides/casestudy1.jpg');"></div>
+                    <div class="casestudy-slide" style="background-image: url('images/slides/casestudy2.jpg');"></div>
+                    <div class="casestudy-slide" style="background-image: url('images/slides/casestudy3.jpg');"></div>
+                    <div class="casestudy-indicators">
+                        <button class="casestudy-indicator active" data-slide="0"></button>
+                        <button class="casestudy-indicator" data-slide="1"></button>
+                        <button class="casestudy-indicator" data-slide="2"></button>
+                    </div>
+                </div>
+                
+                <!-- Descrizione -->
+                <div class="casestudy-content">
+                    <h3>An Industrial Area with Circular Potential</h3>
+                    <p class="casestudy-description">
+                        The Industrial Park of Nocera Inferiore, managed by the Consortium of Enterprises of 
+                        Fosso Imperatore, is the selected case study for the CE_IPsa project. Located in the Campania 
+                        region of Southern Italy, this production area represents an ideal context for studying 
+                        the implementation of Industrial Symbiosis and Circular Economy principles.
+                    </p>
+                    <p class="casestudy-description">
+                        Using geographically limited areas (IPs and surroundings) as reference allows to overcome 
+                        the limits deriving from the selection of larger contexts. Closing production loops and 
+                        realising circular business models can be more easily achieved in small and well-defined 
+                        contexts, rather than on national or even regional scale. In this sense, local production 
+                        areas represent an ideal scale to foster circular economy through targeted and correctly 
+                        planned interventions.
+                    </p>
+                    <p class="casestudy-description">
+                        The primary objective is to demonstrate the effectiveness of a circular development approach 
+                        that builds upon existing regional industrial strengths and local manufacturing traditions, 
+                        creating a sustainable resource loop between the IP and its surrounding territory.
+                    </p>
+                    
+                    
+                    </div>
+					
+                </div>
+				
+				<div class="casestudy-stats">
+                        <div class="casestudy-stat">
+                            <span class="casestudy-stat-number">24</span>
+                            <span class="casestudy-stat-label">Months Duration</span>
+                        </div>
+                        <div class="casestudy-stat">
+                            <span class="casestudy-stat-number">5</span>
+                            <span class="casestudy-stat-label">Research Phases</span>
+                        </div>
+                        <div class="casestudy-stat">
+                            <span class="casestudy-stat-number">SH7</span>
+                            <span class="casestudy-stat-label">ERC Field</span>
+                        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+<section class="section section-light" id="team">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Research Team</span>
+            <h2 class="section-title">Who We Are</h2>
+            <p class="section-subtitle">
+                Two Research Units with a longstanding collaboration in different research areas
+            </p>
+        </div>
+        
+        <div class="partners-grid">
+            <!-- Lead Partner - Napoli (RU1 - PI) -->
+            <div class="partner-card lead">
+                <span class="partner-badge">Lead Partner &bull; RU1</span>
+                <div class="partner-logo">
+                    <img src="images/logos/unior-logo.png" alt="University of Naples L'Orientale" class="partner-logo-img">
+                </div>
+                <h3>University of Naples "L'Orientale"</h3>
+                <p>Department of Human and Social Sciences</p>
+                <p class="partner-cup"><strong>CUP:</strong> C53D23008770001</p>
+                <span class="partner-role">Principal Investigator Unit</span>
+                
+                <div class="team-members-grid">
+                    <a href="team.html#arbolino" class="team-member-card">
+                        <img src="images/team/arbolino.jpg" alt="Prof. Roberta Arbolino" class="team-member-photo">
+                        <div class="team-member-info">
+                            <strong>Prof. Roberta Arbolino</strong>
+                            <span class="team-member-role">PI</span>
+                            <p>Full Professor of Economic Policy</p>
+                        </div>
+                    </a>
+                    <a href="team.html#dechiara" class="team-member-card">
+                        <img src="images/team/dechiara.jpg" alt="Prof. Alessandra De Chiara" class="team-member-photo">
+                        <div class="team-member-info">
+                            <strong>Prof. Alessandra De Chiara</strong>
+                            <p>Full Professor of Management</p>
+                        </div>
+                    </a>
+                    <a href="team.html#lopes" class="team-member-card">
+                        <img src="images/team/lopes.jpg" alt="Prof. Antonio Lopes" class="team-member-photo">
+                        <div class="team-member-info">
+                            <strong>Prof. Antonio Lopes</strong>
+                            <p>Full Professor of Political Economy</p>
+                        </div>
+                    </a>
+                    <a href="team.html#desimone" class="team-member-card">
+                        <img src="images/team/desimone.jpg" alt="Dr. Luisa De Simone" class="team-member-photo">
+                        <div class="team-member-info">
+                            <strong>Dr. Luisa De Simone</strong>
+                            <p>Researcher in Economic Policy</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Separatore Recruited Research Staff -->
+                <div class="team-separator">
+                    <span class="team-separator-title">Recruited Research Staff</span>
+                </div>
+
+                <div class="team-members-grid">
+                    <a href="team.html#licastro" class="team-member-card">
+                        <img src="images/team/licastro.jpg" alt="Dr. Antonio Licastro" class="team-member-photo">
+                        <div class="team-member-info">
+                            <strong>Dr. Antonio Licastro</strong>
+                            <p>Ph.D. in Economics, Management and Statistics</p>
+                        </div>
+                    </a>
+                    <a href="team.html#coscia" class="team-member-card">
+                        <img src="images/team/coscia.jpg" alt="Dr. Maria Coscia" class="team-member-photo">
+                        <div class="team-member-info">
+                            <strong>Dr. Maria Coscia</strong>
+                            <p>Ph.D. in Entrepreneurship and Innovation</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Partner - Messina (RU2 - Co-PI) -->
+            <div class="partner-card">
+                <span class="partner-badge">Partner &bull; RU2</span>
+                <div class="partner-logo">
+                    <img src="images/logos/unime-logo.png" alt="University of Messina" class="partner-logo-img">
+                </div>
+                <h3>University of Messina</h3>
+                <p>Department of Economics</p>
+                <p class="partner-cup"><strong>CUP:</strong> J53D23016630001</p>
+                <span class="partner-role">Co-Principal Investigator Unit</span>
+                
+                <div class="team-members-grid">
+                    <a href="team.html#ioppolo" class="team-member-card">
+                        <img src="images/team/ioppolo.jpg" alt="Prof. Giuseppe Ioppolo" class="team-member-photo">
+                        <div class="team-member-info">
+                            <strong>Prof. Giuseppe Ioppolo</strong>
+                            <span class="team-member-role">Co-PI</span>
+                            <p>Full Professor of Commodity Science</p>
+                        </div>
+                    </a>
+                    <a href="team.html#calabro" class="team-member-card">
+                        <img src="images/team/calabro.jpg" alt="Prof. Grazia Calabr&ograve;" class="team-member-photo">
+                        <div class="team-member-info">
+                            <strong>Prof. Grazia Calabr&ograve;</strong>
+                            <p>Full Professor of Commodity Science</p>
+                        </div>
+                    </a>
+                    <a href="team.html#caristi" class="team-member-card">
+                        <img src="images/team/caristi.jpg" alt="Prof. Giuseppe Caristi" class="team-member-photo">
+                        <div class="team-member-info">
+                            <strong>Prof. Giuseppe Caristi</strong>
+                            <p>Full Professor of Mathematical Economics</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Separatore Recruited Research Staff -->
+                <div class="team-separator">
+                    <span class="team-separator-title">Recruited Research Staff</span>
+                </div>
+                
+                <div class="team-members-grid">
+                    <a href="team.html#dalessandro" class="team-member-card">
+                        <img src="images/team/dalessandro.jpg" alt="Dr. Carlotta D'Alessandro" class="team-member-photo">
+                        <div class="team-member-info">
+                            <strong>Dr. Carlotta D'Alessandro</strong>
+                            <p>Ph.D. in Economics, Management and Statistics</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Latest Outputs Section -->
+    <section class="section section-light" id="outputs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Research Outputs</span>
+                <h2 class="section-title">Latest Publications</h2>
+                <p class="section-subtitle">
+                    Discover our recent scientific contributions and conference presentations
+                </p>
+            </div>
+            
+            <div class="cards-grid">
+                <article class="card publication-card">
+                    <div class="card-body">
+                        <span class="card-tag">Conference Paper &bull; In Press</span>
+                        <h3 class="card-title">
+                            Circular Economy and Industrial Symbiosis in Industrial Parks: Mathematical Approaches and Applications
+                        </h3>
+                        <p class="publication-authors">
+                            D'Alessandro, C., Licastro, A., Arbolino, R., Ioppolo, G., Calabr&ograve;, G.
+                        </p>
+                        <p class="publication-venue">APPLMATH 2025, Messina &bull; June 2025</p>
+                        <div class="publication-links">
+                            <span class="publication-link pdf">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                In Press
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card publication-card">
+                    <div class="card-body">
+                        <span class="card-tag">Conference Paper &bull; In Press</span>
+                        <h3 class="card-title">
+                            Mapping Social Dimensions in Industrial Parks' Digital Transformation: A Bibliometric and Network Analysis
+                        </h3>
+                        <p class="publication-authors">
+                            D'Alessandro, C., Licastro, A., Calabr&ograve;, G., Arbolino, R., Ioppolo, G.
+                        </p>
+                        <p class="publication-venue">DTS 2025, Paris &bull; May 2025</p>
+                        <div class="publication-links">
+                            <span class="publication-link pdf">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                In Press
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card publication-card">
+                    <div class="card-body">
+                        <span class="card-tag">Conference Paper &bull; In Press</span>
+                        <h3 class="card-title">
+                            Industrial Symbiosis Networks in Italian Industrial Parks: the case of Fosso Imperatore
+                        </h3>
+                        <p class="publication-authors">
+                            D'Alessandro, C., Ioppolo, G., Calabr&ograve;, G., &amp; Caristi, G.
+                        </p>
+                        <p class="publication-venue">Research and Innovation Forum 2025 &bull; April 2025</p>
+                        <div class="publication-links">
+                            <span class="publication-link pdf">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                In Press
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="publications.html" class="btn btn-secondary">
+                    View All Publications
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-text">CE_IPsa</div>
+                <p>
+                    A Development Model for Circular Economy between Industrial Parks and Surroundings Areas.
+                    A PRIN 2022 PNRR research project.
+                </p>
+                <div class="footer-funding">
+                    <div class="footer-funding-text">
+                        Funded by the European Union &ndash; NextGenerationEU under the Italian Ministry of University and Research (MUR) as part of the PRIN 2022 PNRR program.
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Dissemination</h4>
+                <ul class="footer-links">
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="conferences.html">Conferences</a></li>
+                    <li><a href="special-issue.html">Special Issue</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="contacts.html">Contact Us</a></li>
+                    <li><a href="team.html">Research Team</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023-2026 CE_IPsa Project. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

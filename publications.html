@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | CE_IPsa Project</title>
+    <meta name="description" content="Scientific publications from the CE_IPsa PRIN 2022 PNRR research project.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a5c2a'/%3E%3Ctext x='50' y='62' font-family='Georgia' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECE%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .publication-card[id] { scroll-margin-top: 120px; transition: box-shadow 0.3s, transform 0.3s; }
+        @keyframes flashHighlight {
+            0%, 100% { box-shadow: var(--shadow-md); }
+            25%, 75% { box-shadow: 0 0 0 4px var(--primary-400), var(--shadow-lg); }
+            50% { box-shadow: 0 0 0 4px var(--primary-600), var(--shadow-lg); }
+        }
+        .publication-card.flash-highlight { animation: flashHighlight 0.6s ease-in-out 3; }
+
+        /* Clickable cards */
+        .clickable-card { cursor: pointer; }
+        .clickable-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+        .card-click-hint { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--primary-500); margin-top: 12px; font-weight: 600; }
+
+        /* Modal styles */
+        .pub-modal-overlay { display: none; position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); align-items: center; justify-content: center; padding: 20px; }
+        .pub-modal-overlay.active { display: flex; }
+        .pub-modal { background: var(--white); border-radius: 20px; max-width: 720px; width: 100%; max-height: 85vh; overflow-y: auto; box-shadow: 0 25px 60px rgba(0,0,0,0.3); position: relative; }
+        .pub-modal-header { padding: 32px 32px 20px; border-bottom: 1px solid var(--gray-100); }
+        .pub-modal-header .card-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 50px; background: var(--primary-50); color: var(--primary-700); margin-bottom: 12px; }
+        .pub-modal-header h2 { font-size: 1.35rem; color: var(--primary-800); line-height: 1.4; margin-bottom: 12px; }
+        .pub-modal-header .pub-authors { font-size: 0.95rem; color: var(--gray-600); margin-bottom: 8px; }
+        .pub-modal-header .pub-venue { font-size: 0.9rem; color: var(--gray-500); line-height: 1.6; }
+        .pub-modal-body { padding: 24px 32px 32px; }
+        .pub-modal-body h4 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-600); margin-bottom: 12px; }
+        .pub-modal-body p { color: var(--gray-700); line-height: 1.8; text-align: justify; margin-bottom: 16px; }
+        .pub-modal-body .pub-doi { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 600; color: var(--primary-600); background: var(--primary-50); padding: 8px 18px; border-radius: 50px; margin-top: 8px; transition: all 0.2s; }
+        .pub-modal-body .pub-doi:hover { background: var(--primary-100); color: var(--primary-800); }
+        .pub-modal-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; border: none; background: var(--gray-100); color: var(--gray-600); font-size: 1.3rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; z-index: 10; }
+        .pub-modal-close:hover { background: var(--gray-200); color: var(--gray-800); }
+        .abstract-pending { font-style: italic; color: var(--gray-500); background: var(--gray-50); padding: 16px 20px; border-radius: 12px; border-left: 3px solid var(--primary-300); }
+        @media (max-width: 768px) {
+            .pub-modal { max-height: 90vh; border-radius: 16px; }
+            .pub-modal-header, .pub-modal-body { padding: 20px; }
+            .pub-modal-header h2 { font-size: 1.15rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-logo-bar">
+    <div class="top-logo-bar-container">
+        <img src="images/logos/logo1.png" alt="Funded by EU">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo2.png" alt="MUR">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo3.png" alt="Italia Domani">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo5.png" alt="University of Naples L'Orientale">
+        <img src="images/logos/logo4.png" alt="University of Messina">
+    </div>
+</div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-main">
+                    <span class="logo-text">CE_IPsa</span>
+                    <span class="logo-badge">PRIN 2022 PNRR</span>
+                </div>
+                <div class="logo-codes">
+                    <span class="code-item">Project: P20227NFA4;</span>
+                    <span class="code-item">CUP UniOr: C53D23008770001</span>
+                    <span class="code-divider">-</span>
+                    <span class="code-item">CUP UniMe: J53D23016630001</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle active">
+                        Dissemination
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="publications.html" class="active">Publications</a>
+                        <a href="conferences.html">Conferences</a>
+                        <a href="special-issue.html">Special Issue</a>
+                    </div>
+                </li>
+                <li><a href="contacts.html">Contact Us</a></li>
+            </ul>
+            <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Publications</span></nav>
+            <h1>Publications</h1>
+            <p>Scientific contributions, journal articles, and conference proceedings from the CE_IPsa project</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="cards-grid">
+                <!-- Publication 1 - Sustainability 2025 -->
+                <article class="card publication-card clickable-card" id="pub-sustainability2025" data-modal="modal-sustainability2025">
+                    <div class="card-body">
+                        <span class="card-tag">Journal Article &#8226; MDPI</span>
+                        <h3 class="card-title">A Circular Land Use Model for Reconciling Industrial Expansion with Agricultural Heritage in Italian Industrial Parks</h3>
+                        <p class="publication-authors">D'Alessandro, C., Licastro, A., Arbolino, R., Calabr&#242;, G., &amp; Ioppolo, G.</p>
+                        <p class="publication-venue"><em>Sustainability</em> 2025, 17(19), 8830. Special Issue: New Innovative and Attractive Models for Promoting Circular Economy Actions Between Industrial Parks and Surroundings Areas &#8226; 2025</p>
+                        <div class="card-click-hint">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            Click to read abstract
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Publication 2 - APPLMATH -->
+                <article class="card publication-card clickable-card" id="pub-applmath2025" data-modal="modal-applmath2025">
+                    <div class="card-body">
+                        <span class="card-tag">Conference Paper &#8226; In Press</span>
+                        <h3 class="card-title">Resource Optimization and Waste Management of Fosso Imperatore Industrial Park: A Multi-Criteria Decision-Making Approach</h3>
+                        <p class="publication-authors">D'Alessandro, C., Licastro, A., Arbolino, R., Ioppolo, G., Calabr&#242;, G.</p>
+                        <p class="publication-venue">In: <em>Atti della Accademia Peloritana dei Pericolanti</em> - Classe di Scienze Fisiche, Matematiche e Naturali. (Ongoing Publication) &#8226; 2025</p>
+                        <div class="card-click-hint">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            Click to read abstract
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Publication 3 - DTS 2025 -->
+                <article class="card publication-card clickable-card" id="pub-dts2025" data-modal="modal-dts2025">
+                    <div class="card-body">
+                        <span class="card-tag">Conference Paper &#8226; In Press</span>
+                        <h3 class="card-title">Mapping Social Dimensions in Industrial Parks' Digital Transformation: A Bibliometric and Network Analysis</h3>
+                        <p class="publication-authors">D'Alessandro, C., Licastro, A., Calabr&#242;, G., Arbolino, R., Ioppolo, G.</p>
+                        <p class="publication-venue">In: <em>DTS 2025 Springer Proceedings</em>. (Ongoing Publication) &#8226; 2025</p>
+                        <div class="card-click-hint">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            Click to read abstract
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Publication 4 - RIF 2025 -->
+                <article class="card publication-card clickable-card" id="pub-rif2025" data-modal="modal-rif2025">
+                    <div class="card-body">
+                        <span class="card-tag">Conference Paper &#8226; In Press</span>
+                        <h3 class="card-title">Industrial Symbiosis Networks in Italian Industrial Parks: the case of Fosso Imperatore</h3>
+                        <p class="publication-authors">D'Alessandro, C., Ioppolo, G., Calabr&#242;, G., &amp; Caristi, G.</p>
+                        <p class="publication-venue">In: <em>Research and Innovation Forum 2025 Proceedings</em>. (Ongoing Publication) &#8226; 2025</p>
+                        <div class="card-click-hint">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            Click to read abstract
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Publication 5 - FEMIB -->
+                <article class="card publication-card clickable-card" id="pub-femib2025" data-modal="modal-femib2025">
+                    <div class="card-body">
+                        <span class="card-tag">Conference Paper</span>
+                        <h3 class="card-title">Industrial Parks in Italy: A Systematic Overview and Preliminary Analysis of the Fosso Imperatore Case Study</h3>
+                        <p class="publication-authors">D'Alessandro, C., Ioppolo, G., Calabr&#242;, G., &amp; Caristi, G.</p>
+                        <p class="publication-venue">In <em>Proceedings of the 7th International Conference on Finance, Economics, Management and IT Business</em> (FEMIB 2025), pages 61-67. ISBN 978-989-758-748-1; ISSN 2184-5891 &#8226; 2025</p>
+                        <div class="card-click-hint">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            Click to read abstract
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Publication 6 - DTS 2024 Springer -->
+                <article class="card publication-card clickable-card" id="pub-dts2024" data-modal="modal-dts2024">
+                    <div class="card-body">
+                        <span class="card-tag">Conference Paper &#8226; Springer</span>
+                        <h3 class="card-title">A Development Model for Circular Economy Between Industrial Parks and Surroundings Areas (CE_IPsa): The Reverse Logistics Strategic Approach</h3>
+                        <p class="publication-authors">D'Alessandro, C., Ioppolo, G., Calabr&#242;, G., Caristi, G.</p>
+                        <p class="publication-venue">In: Schiavone, F., Omrani, N., Gabteni, H. (eds) <em>Advanced Perspectives and Trends in Digital Transformation of Firms, Networks, and Society</em>. DTS 2024. Springer Proceedings in Business and Economics. Springer, Cham. &#8226; 2025</p>
+                        <div class="card-click-hint">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            Click to read abstract
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Publication 7 - XXXII Congresso -->
+                <article class="card publication-card clickable-card" id="pub-congresso2024" data-modal="modal-congresso2024">
+                    <div class="card-body">
+                        <span class="card-tag">Conference Paper</span>
+                        <h3 class="card-title">Circular Economy and Industrial Symbiosis for Sustainable Industrial Systems</h3>
+                        <p class="publication-authors">D'Alessandro, C., Ioppolo, G., Calabr&#242;, G., &amp; Caristi, G.</p>
+                        <p class="publication-venue">In: Agnusdei, L., Miglietta, P. P., et al. (Eds.), <em>Conference Proceedings: XXXII Congresso Nazionale di Scienze Merceologiche</em> (pp. 48-56). ISBN: 979-12-985593-1-8 &#8226; 2024</p>
+                        <div class="card-click-hint">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            Click to read abstract
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+<!-- ==================== MODALS ==================== -->
+
+<!-- Modal 1 - DTS 2024 -->
+<div class="pub-modal-overlay" id="modal-dts2024">
+    <div class="pub-modal">
+        <button class="pub-modal-close">&times;</button>
+        <div class="pub-modal-header">
+            <span class="card-tag">Conference Paper &#8226; Springer</span>
+            <h2>A Development Model for Circular Economy Between Industrial Parks and Surroundings Areas (CE_IPsa): The Reverse Logistics Strategic Approach</h2>
+            <p class="pub-authors">D'Alessandro, C., Ioppolo, G., Calabr&#242;, G., Caristi, G.</p>
+            <p class="pub-venue">In: Schiavone, F., Omrani, N., Gabteni, H. (eds) <em>Advanced Perspectives and Trends in Digital Transformation of Firms, Networks, and Society</em>. DTS 2024. Springer Proceedings in Business and Economics. Springer, Cham. &#8226; 2025</p>
+        </div>
+        <div class="pub-modal-body">
+            <h4>Abstract</h4>
+            <p>The CE_IPsa (Circular Economy_Industrial Parks and the surrounding area) project aims to outline a development model to foster interconnection between industrial parks (IPs) and their surrounding area, based on circular economy (CE) and industrial symbiosis (IS) principles. CE offers sustainable solutions, fostering economic growth and environmental health. Despite this, CE has received limited attention in the supply chain context. Encompassing CE, IS, and Industry 4.0 (I. 4.0) digital technologies, (such as Blockchain, Internet of Things, Cyber-Physical Systems, and Cloud Computing), this chapter proposes reverse logistics (RL) as a strategic approach for managing product returns, end-of-life treatment, and recovery to eliminate waste. As part of the CE_IPsa project, the study's purpose is to promote the transition to a net-zero balance, where resource extraction is offset by resource recovery and waste generation is minimized. This chapter shows the preliminary results of the first phase of the CE_IPsa project, building upon a Scooping review, and proposing a framework based on the integration of RL with I. 4.0 technologies as driving force to stimulate the connection between IP and the surrounding context. With a redesigned supply chain that integrates a RL approach empowered by I. 4.0 technologies, businesses within the IPs and the surrounding area can unlock significant potential. This solution optimizes operations and minimizes environmental impact, offering a valuable strategy for policymakers to support the implementation of a circular industrial system. The paper concludes by outlining key challenges, opportunities, and future research directions in harnessing the power of digital transformation for greener businesses.</p>
+            <a href="https://doi.org/10.1007/978-3-031-80692-6_24" class="pub-doi" target="_blank">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                DOI: 10.1007/978-3-031-80692-6_24
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 - XXXII Congresso -->
+<div class="pub-modal-overlay" id="modal-congresso2024">
+    <div class="pub-modal">
+        <button class="pub-modal-close">&times;</button>
+        <div class="pub-modal-header">
+            <span class="card-tag">Conference Paper</span>
+            <h2>Circular Economy and Industrial Symbiosis for Sustainable Industrial Systems</h2>
+            <p class="pub-authors">D'Alessandro, C., Ioppolo, G., Calabr&#242;, G., &amp; Caristi, G.</p>
+            <p class="pub-venue">In: Agnusdei, L., Miglietta, P. P., et al. (Eds.), <em>Conference Proceedings: XXXII Congresso Nazionale di Scienze Merceologiche</em> (pp. 48-56). ISBN: 979-12-985593-1-8 &#8226; 2024</p>
+        </div>
+        <div class="pub-modal-body">
+            <h4>Abstract</h4>
+            <p>To successfully reach the "close the loop" objective, as advocated by the Circular Economy (CE), a revision of the existing linear production economy model, to balance resource utilization and waste discharge is necessary. Incorporating concepts like the CE and Industrial Symbiosis (IS), especially in the production phase, can be instrumental for policymakers and stakeholders, to enhance resource efficiency, environmental, social sustainability, and economic competitiveness within the industrial system. Indeed, IS connects enterprises from several different industries to foster waste recovery, increase resource productivity, and mitigate environmental footprint. Moreover, large areas can be difficult to manage for recycling initiatives. Industrial parks (IPs), with their defined borders, offer a more manageable solution. These specified areas are considered intricate ecosystems, in which stakeholders engage and collaborate symbiotically, reflecting a synergistic framework. In this regard, the study, as part of the CE_IPsa (CE_IPsa: A development model for Circular Economy between Industrial Parks and surroundings areas) project, performed a literature overview focused on the IP initiatives that have evolved at the European Union level. This research attempts to contribute to the understanding and improvement of sustainable practices within industrial systems, while evidencing any symbiotic relationship that may exist between IS and CE in alleviating the impacts of the linear production model and promoting sustainability. In summary, the investigation highlights the challenges, opportunities, and potential future outlooks for research and policy initiatives.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 - FEMIB 2025 -->
+<div class="pub-modal-overlay" id="modal-femib2025">
+    <div class="pub-modal">
+        <button class="pub-modal-close">&times;</button>
+        <div class="pub-modal-header">
+            <span class="card-tag">Conference Paper</span>
+            <h2>Industrial Parks in Italy: A Systematic Overview and Preliminary Analysis of the Fosso Imperatore Case Study</h2>
+            <p class="pub-authors">D'Alessandro, C., Ioppolo, G., Calabr&#242;, G., &amp; Caristi, G.</p>
+            <p class="pub-venue">In <em>Proceedings of the 7th International Conference on Finance, Economics, Management and IT Business</em> (FEMIB 2025), pages 61-67. ISBN 978-989-758-748-1; ISSN 2184-5891 &#8226; 2025</p>
+        </div>
+        <div class="pub-modal-body">
+            <h4>Abstract</h4>
+            <p>This paper presents a systematic overview of Italian Industrial Parks (IPs) and introduces a preliminary analysis of an understudied case in Southern Italy. PRISMA guidelines were employed, to identify eight relevant studies primarily focused solely on North-Centre Italy. The analysis uncovered a certain degree of diversity in park dimensions and industrial sectors, with specialized single-sector and multi-sector parks. This diversity enables integrated supply networks and optimized resource flow in multi-sector parks, while single-sector parks achieve operational efficiency through sector-specific shared services and infrastructure. This study has then examined the unstudied case of Fosso Imperatore Industrial Park (Campania). Based on publicly available information, the analysis evaluated key elements that characterize successful Eco-Industrial Parks (EIPs). The preliminary findings have suggested the potential presence of several EIP elements, particularly regarding networking capabilities and shared services. Further research is needed to validate these characteristics through primary data collection, focusing also on investigating additional cases of EIPs in Southern Italy. Additionally, supply chain management practices and operational strategies within EIPs should be further explored. This research provides an initial exploration of an understudied area in Italy, revealing its potential for industrial symbiosis (IS) and setting the stage for future comprehensive studies.</p>
+            <a href="https://doi.org/10.5220/0013404900003956" class="pub-doi" target="_blank">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                DOI: 10.5220/0013404900003956
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 4 - Sustainability 2025 -->
+<div class="pub-modal-overlay" id="modal-sustainability2025">
+    <div class="pub-modal">
+        <button class="pub-modal-close">&times;</button>
+        <div class="pub-modal-header">
+            <span class="card-tag">Journal Article &#8226; MDPI</span>
+            <h2>A Circular Land Use Model for Reconciling Industrial Expansion with Agricultural Heritage in Italian Industrial Parks</h2>
+            <p class="pub-authors">D'Alessandro, C., Licastro, A., Arbolino, R., Calabr&#242;, G., &amp; Ioppolo, G.</p>
+            <p class="pub-venue"><em>Sustainability</em> 2025, 17(19), 8830. Special Issue: New Innovative and Attractive Models for Promoting Circular Economy Actions Between Industrial Parks and Surroundings Areas &#8226; 2025</p>
+        </div>
+        <div class="pub-modal-body">
+            <h4>Abstract</h4>
+            <p>Industrial park (IP) expansions in Mediterranean peri-urban areas can generate conflicts between economic development and agricultural heritage preservation. This paper develops a theoretically derived circular land use symbiosis model based on Hubs for Circularity (H4C) principles, using Fosso Imperatore IP in southern Italy as an illustrative case. This model proposes a transferable three-zone gradient design that enables the transformation of industrial&#8211;agricultural boundaries when combined with appropriate governance mechanisms and stakeholder engagement. Zone A concentrates vertical industrial development with rooftop agriculture; Zone B creates mixed agro-industrial interfaces; and Zone C enhances agricultural productivity through industrial resources. The model's components (gradient zonation, temperature&#8211;cascade matching, and bidirectional resource flows) constitute generalizable design principles. When applied to Fosso Imperatore, where farmers oppose expansion that threatens culturally significant San Marzano tomato production, the model shows how 547 tons of organic waste could generate 87,520 m&#179; of methane, while industrial waste heat cascades from 150&#8211;200 &#176;C to 25&#8211;40 &#176;C of greenhouse heating across distances of 3 km. Implementation constraints include regulatory gaps and limited empirical data. This study operationalizes H4C through spatial design, showing how benefit-sharing mechanisms can transform stakeholder conflicts into collaboration. The model provides a replicable framework for Mediterranean contexts where industrial expansion encounters agricultural heritage.</p>
+            <a href="https://doi.org/10.3390/su17198830" class="pub-doi" target="_blank">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                DOI: 10.3390/su17198830
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 5 - RIF 2025 -->
+<div class="pub-modal-overlay" id="modal-rif2025">
+    <div class="pub-modal">
+        <button class="pub-modal-close">&times;</button>
+        <div class="pub-modal-header">
+            <span class="card-tag">Conference Paper &#8226; In Press</span>
+            <h2>Industrial Symbiosis Networks in Italian Industrial Parks: the case of Fosso Imperatore</h2>
+            <p class="pub-authors">D'Alessandro, C., Ioppolo, G., Calabr&#242;, G., &amp; Caristi, G.</p>
+            <p class="pub-venue">In: <em>Research and Innovation Forum 2025 Proceedings</em>. (Ongoing Publication) &#8226; 2025</p>
+        </div>
+        <div class="pub-modal-body">
+            <h4>Abstract</h4>
+            <p>Industrial parks (IPs) represent critical nodes in sustainable industrial development, with Industrial Symbiosis (IS) emerging as a promising approach for enhancing resource efficiency and environmental performance. This paper examines the Fosso Imperatore IP in Southern Italy to address the geographical gap in IS studies focused on this region. Using a computational approach combining Python-based waste flow estimation with network analysis, the study quantifies potential material exchanges and identifies barriers to implementation. Results reveal the technical potential for symbiotic relationships with 319.74 tons of metal, 1,775.02 tons of plastic, 186.55 tons of paper, and 547.06 tons of organic waste that could potentially be exchanged within the park. However, network analysis shows that despite favorable network density (0.32) and compatible material flows, companies currently process 100% of waste externally, primarily due to economic incentives from external buyers. The research identifies key barriers to IS implementation including economic considerations, information asymmetry, and limited internal processing infrastructure. Digital technologies including IoT-enabled waste monitoring, blockchain-based transaction systems, and AI-powered matching algorithms present promising solutions to overcome these barriers. However, technological innovation must be coupled with economic incentives and institutional support to transform technical potential into implemented symbiotic relationships. Indeed, geographical proximity and technical compatibility alone are insufficient drivers for symbiosis development without addressing underlying economic and social barriers.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 6 - DTS 2025 -->
+<div class="pub-modal-overlay" id="modal-dts2025">
+    <div class="pub-modal">
+        <button class="pub-modal-close">&times;</button>
+        <div class="pub-modal-header">
+            <span class="card-tag">Conference Paper &#8226; In Press</span>
+            <h2>Mapping Social Dimensions in Industrial Parks' Digital Transformation: A Bibliometric and Network Analysis</h2>
+            <p class="pub-authors">D'Alessandro, C., Licastro, A., Calabr&#242;, G., Arbolino, R., Ioppolo, G.</p>
+            <p class="pub-venue">In: <em>DTS 2025 Springer Proceedings</em>. (Ongoing Publication) &#8226; 2025</p>
+        </div>
+        <div class="pub-modal-body">
+            <h4>Abstract</h4>
+            <p>This study examines how social aspects are represented in the literature on digital technologies within Industrial Parks (IPs) through a systematic selection of 204 peer-reviewed articles. While Industry 5.0 emphasizes human-centric approaches and technological advancement, the social implications of digital transformation in IPs remain underexplored. Using bibliometric and network analysis, this study shows that social dimensions, while present, are predominantly viewed through the lens of environmental health impacts, safety measures, and accident prevention. The bibliometric analysis indicates a significant geographical concentration of research in Asian countries, particularly China, and a strong focus on environmental sustainability and resource efficiency in leading journals. Network analysis shows that human-centered considerations primarily emerge in connection with environmental health and safety concerns, while broader social aspects such as worker well-being, community impact, and human-machine interaction receive limited attention. The study identifies several gaps in current research, including the narrow technological focus of security considerations and the limited exploration of socio-economic implications. Indeed, there is a need for more balanced approaches that consider both technological advancement and social sustainability in the digital transformation of IPs, pointing to opportunities for future research in developing holistic frameworks that integrate social considerations as fundamental elements of technological innovation.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 7 - APPLMATH 2025 -->
+<div class="pub-modal-overlay" id="modal-applmath2025">
+    <div class="pub-modal">
+        <button class="pub-modal-close">&times;</button>
+        <div class="pub-modal-header">
+            <span class="card-tag">Conference Paper &#8226; In Press</span>
+            <h2>Resource Optimization and Waste Management of Fosso Imperatore Industrial Park: A Multi-Criteria Decision-Making Approach</h2>
+            <p class="pub-authors">D'Alessandro, C., Licastro, A., Arbolino, R., Ioppolo, G., Calabr&#242;, G.</p>
+            <p class="pub-venue">In: <em>Atti della Accademia Peloritana dei Pericolanti</em> - Classe di Scienze Fisiche, Matematiche e Naturali. (Ongoing Publication) &#8226; 2025</p>
+        </div>
+        <div class="pub-modal-body">
+            <h4>Abstract</h4>
+            <p>This paper applies multi-criteria decision-making (MCDM) methodology to evaluate resource optimization and waste management strategies for the Fosso Imperatore Industrial Park. The study employs quantitative analytical tools to assess alternative scenarios for improving resource efficiency and waste management practices within the park and its surrounding area. By integrating environmental, economic, and social criteria into a structured evaluation framework, the research identifies optimal intervention pathways that balance competing objectives. The multi-objective approach, grounded in mathematical optimization techniques, provides a replicable methodology for decision-makers and policymakers seeking to promote circular economy transitions in industrial park contexts. The findings offer practical guidance for the implementation of industrial symbiosis initiatives in the Agro Nocerino-Sarnese territory.</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-text">CE_IPsa</div>
+                <p>A Development Model for Circular Economy between Industrial Parks and Surroundings Areas. A PRIN 2022 PNRR research project.</p>
+                <div class="footer-funding"><div class="footer-funding-text">Funded by the European Union &#8211; NextGenerationEU under the Italian Ministry of University and Research (MUR) as part of the PRIN 2022 PNRR program.</div></div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Dissemination</h4>
+                <ul class="footer-links">
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="conferences.html">Conferences</a></li>
+                    <li><a href="special-issue.html">Special Issue</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="contacts.html">Contact Us</a></li>
+                    <li><a href="team.html">Research Team</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&#169; 2023-2026 CE_IPsa Project. All rights reserved.</p>
+            <div class="footer-legal"><a href="privacy.html">Privacy Policy</a></div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// Publication modals
+document.querySelectorAll('.clickable-card[data-modal]').forEach(card => {
+    card.addEventListener('click', function(e) {
+        if (e.target.closest('a')) return; // Don't intercept link clicks
+        const modalId = this.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+document.querySelectorAll('.pub-modal-overlay').forEach(overlay => {
+    // Close on X button
+    overlay.querySelector('.pub-modal-close').addEventListener('click', () => {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    // Close on overlay click
+    overlay.addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+});
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.pub-modal-overlay.active').forEach(m => {
+            m.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+});
+
+// Flash highlight for cards linked from conferences
+if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target && target.classList.contains('publication-card')) {
+        setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => {
+                target.classList.add('flash-highlight');
+                target.addEventListener('animationend', () => {
+                    target.classList.remove('flash-highlight');
+                });
+            }, 500);
+        }, 100);
+    }
+}
+</script>
+</body>
+</html>
