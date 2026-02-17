@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
   <url>
     <loc>https://ceipsapnrr.github.io/index.html</loc>
     <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Research Activities -->
   <url>
     <loc>https://ceipsapnrr.github.io/ra1.html</loc>
     <lastmod>2026-02-17</lastmod>
@@ -39,8 +36,6 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Team & Publications -->
   <url>
     <loc>https://ceipsapnrr.github.io/team.html</loc>
     <lastmod>2026-02-17</lastmod>
@@ -59,16 +54,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- Special Issue -->
   <url>
     <loc>https://ceipsapnrr.github.io/special-issue.html</loc>
     <lastmod>2026-02-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Other -->
   <url>
     <loc>https://ceipsapnrr.github.io/contacts.html</loc>
     <lastmod>2026-02-17</lastmod>
