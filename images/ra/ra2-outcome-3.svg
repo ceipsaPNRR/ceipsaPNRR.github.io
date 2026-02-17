@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280">
+                                <!-- Title -->
+                                <text x="250" y="20" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1a5c2a" text-anchor="middle">Strategic SWOT Matrix</text>
+                                <!-- Strengths (top-left) -->
+                                <rect x="10" y="30" width="235" height="120" rx="10" fill="#1a5c2a"/>
+                                <text x="128" y="52" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">S - Strengths</text>
+                                <line x1="30" y1="58" x2="225" y2="58" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+                                <text x="30" y="76" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">~25 diverse firms</text>
+                                <text x="30" y="96" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Geographic proximity</text>
+                                <text x="30" y="116" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">2,828t recyclable waste</text>
+                                <text x="30" y="136" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Service infrastructure</text>
+                                <!-- Weaknesses (top-right) -->
+                                <rect x="255" y="30" width="235" height="120" rx="10" fill="#d97706"/>
+                                <text x="373" y="52" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">W - Weaknesses</text>
+                                <line x1="275" y1="58" x2="470" y2="58" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+                                <text x="275" y="76" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Linear model dominant</text>
+                                <text x="275" y="96" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">No IS practices</text>
+                                <text x="275" y="116" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Limited technology</text>
+                                <text x="275" y="136" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Low inter-firm trust</text>
+                                <!-- Opportunities (bottom-left) -->
+                                <rect x="10" y="155" width="235" height="120" rx="10" fill="#2563eb"/>
+                                <text x="128" y="177" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">O - Opportunities</text>
+                                <line x1="30" y1="183" x2="225" y2="183" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+                                <text x="30" y="201" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Digital platforms</text>
+                                <text x="30" y="221" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Specialized intermediaries</text>
+                                <text x="30" y="241" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">EIP certification</text>
+                                <text x="30" y="261" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Local resource loops</text>
+                                <!-- Threats (bottom-right) -->
+                                <rect x="255" y="155" width="235" height="120" rx="10" fill="#dc2626"/>
+                                <text x="373" y="177" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">T - Threats</text>
+                                <line x1="275" y1="183" x2="470" y2="183" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+                                <text x="275" y="201" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Stakeholder conflicts</text>
+                                <text x="275" y="221" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Info asymmetry</text>
+                                <text x="275" y="241" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Regulatory complexity</text>
+                                <text x="275" y="261" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Citizen resistance</text>
+                            </svg>

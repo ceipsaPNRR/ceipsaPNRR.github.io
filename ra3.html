@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RA3 — Definition of the Development Model | CE_IPsa Project</title>
+    <meta name="description" content="Research Activity 3: Definition of the Development Model &mdash; Identifying best practices, synergies, and building a comprehensive CE/IS development model for industrial parks.">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a5c2a'/%3E%3Ctext x='50' y='62' font-family='Georgia' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECE%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .ra-hero {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            margin-bottom: 48px;
+            border-radius: 16px;
+        }
+        .ra-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .ra-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 92, 42, 0.88) 0%, rgba(35, 122, 56, 0.72) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ra-hero-text {
+            text-align: center;
+            color: white;
+            padding: 24px;
+        }
+        .ra-hero-text h2 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: white;
+        }
+        .ra-hero-text p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .objective-card {
+            background: var(--gray-50);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid var(--gray-200);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .objective-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .objective-card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-100);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        .objective-card-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--primary-600);
+            fill: none;
+            stroke-width: 2;
+        }
+        .objective-card h4 {
+            color: var(--primary-700);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .objective-card p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            margin: 0;
+            text-align: justify;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        .features-grid .objective-card:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+            max-width: 50%;
+            justify-self: center;
+        }
+        .outcomes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .outcome-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: center;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .outcome-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .outcome-content h4 {
+            color: var(--primary-700);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+        .outcome-content p {
+            color: var(--gray-600);
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .outcome-visual {
+            background: var(--gray-50);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+        }
+        .outcome-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-50) 0%, var(--primary-100) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-600);
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-align: center;
+            padding: 20px;
+        }
+        .outcome-visual img {
+            width: 100%;
+            height: 250px;
+            display: block;
+            cursor: zoom-in;
+            transition: filter 0.2s;
+        }
+        .outcome-visual img:hover {
+            filter: brightness(0.95);
+        }
+        .outcome-caption {
+            padding: 12px;
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            text-align: center;
+            background: white;
+            border-top: 1px solid var(--gray-100);
+            font-style: italic;
+        }
+        .project-info-box {
+            margin-bottom: 48px;
+            padding: 24px;
+            background: var(--primary-50);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-500);
+            width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+        }
+        .deliverable-box {
+            margin-top: 48px;
+            padding: 24px;
+            background: var(--gray-50);
+            border-radius: 16px;
+            border: 1px solid var(--gray-200);
+            border-left: 4px solid var(--accent-gold);
+        }
+        .deliverable-box h4 {
+            color: var(--primary-700);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .deliverable-box p {
+            color: var(--gray-600);
+            margin: 0;
+        }
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .features-grid .objective-card:last-child:nth-child(odd) {
+                max-width: 100%;
+            }
+            .outcome-card {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+        @media (max-width: 768px) {
+            .project-info-box {
+                width: 100%;
+            }
+        }
+        .lightbox-modal {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            cursor: zoom-out;
+        }
+        .lightbox-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox-content {
+            width: 90vw;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            cursor: default;
+            background: #ffffff;
+            padding: 24px;
+        }
+        .lightbox-content svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .lightbox-modal.active .lightbox-content {
+            transform: scale(1);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+        .lightbox-close:hover {
+            color: var(--primary-200);
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-logo-bar">
+    <div class="top-logo-bar-container">
+        <img src="images/logos/logo1.png" alt="Funded by EU">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo2.png" alt="MUR">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo3.png" alt="Italia Domani">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo5.png" alt="University of Naples L'Orientale">
+        <img src="images/logos/logo4.png" alt="University of Messina">
+    </div>
+</div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-main">
+                    <span class="logo-text">CE_IPsa</span>
+                    <span class="logo-badge">PRIN 2022 PNRR</span>
+                </div>
+                <div class="logo-codes">
+                    <span class="code-item">Project: P20227NFA4;</span>
+                    <span class="code-item">CUP UniOr: C53D23008770001</span>
+                    <span class="code-divider">-</span>
+                    <span class="code-item">CUP UniMe: J53D23016630001</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Research Activities
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="ra1.html">RA1 &ndash; Literature Review</a>
+                        <a href="ra2.html">RA2 &ndash; Context Analysis</a>
+                        <a href="ra3.html">RA3 &ndash; Development Model</a>
+                        <a href="ra4.html">RA4 &ndash; Development Plan</a>
+                        <a href="ra5.html">RA5 &ndash; DSS Development</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Dissemination
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="publications.html">Publications</a>
+                        <a href="conferences.html">Conferences</a>
+                        <a href="special-issue.html">Special Issue</a>
+                    </div>
+                </li>
+                <li><a href="contacts.html">Contact Us</a></li>
+            </ul>
+            <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="#">Research Activities</a>
+                <span>/</span>
+                <span>RA3</span>
+            </nav>
+            <h1>RA3 &mdash; Definition of the Development Model</h1>
+            <p>Identifying best practices, synergies, and building a comprehensive CE/IS development model for industrial parks</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="content-wrapper" style="max-width: 900px; margin: 0 auto;">
+
+                <!-- Hero Image - PLACEHOLDER -->
+                <div class="ra-hero">
+                    <img src="images/ra/ra3-placeholder.jpg" alt="Development model for Circular Economy and Industrial Symbiosis in industrial parks" loading="lazy"
+                         onerror="this.style.display='none'; this.parentElement.querySelector('.ra-hero-overlay').style.background='linear-gradient(135deg, rgba(26,92,42,0.95) 0%, rgba(35,122,56,0.85) 100%)';">
+                    <div class="ra-hero-overlay">
+                        <div class="ra-hero-text">
+                            <h2>Studying &amp; Building Phase</h2>
+                            <p>From theory to model construction through best practices and synergy identification</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- IMAGE NOTE: Ideal image - industrial park aerial view with interconnected flows, or abstract diagram of circular economy model construction -->
+
+                <div class="section-header text-left" style="max-width: 100%; margin-bottom: 40px;">
+                    <span class="section-badge">Research Activity 3</span>
+                    <h2 class="section-title text-left">Overview</h2>
+                </div>
+
+                <p class="lead" style="margin-bottom: 32px; text-align: justify;">
+                    RA3 employs the outputs of RA1 and RA2 to design the development model. Both theoretical and empirical evidence are considered in the definition of the framework, as the knowledge of territorial characteristics and weaknesses is useful to ensure the feasibility of model designing. This activity is linked to the keywords &lsquo;Circular Entrepreneurship&rsquo; and &lsquo;Industrial Symbiosis&rsquo;.
+                </p>
+                <p style="margin-bottom: 32px; text-align: justify; color: var(--gray-600);">
+                    The in-depth analysis of recognized best practices will allow to identify factors enabling the birth and development of circular businesses. Furthermore, existing synergies among different production sectors will highlight the most effective exchange of materials for increasing levels of IS in the industrial areas and identify most suitable interventions which could maximise collaborative behaviour among firms. Based on this and on the evidence provided by the literature review, a development model will be constructed.
+                </p>
+
+                <div class="project-info-box">
+                    <p style="margin: 0; color: var(--gray-700);"><strong>Duration:</strong> Year 1 Bimester 6 + Year 2 Bimesters 1&ndash;2</p>
+                    <p style="margin: 8px 0 0; color: var(--gray-700);"><strong>Status:</strong> <span style="background: #10b981; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Completed</span></p>
+                    <p style="margin: 8px 0 0; color: var(--gray-700);"><strong>Lead:</strong> RU1 &mdash; University of Naples &ldquo;L&rsquo;Orientale&rdquo;</p>
+                </div>
+
+                <h3 style="margin-top: 48px; margin-bottom: 24px;">Key Objectives</h3>
+
+                <div class="features-grid">
+                    <div class="objective-card">
+                        <div class="objective-card-icon">
+                            <!-- Link/Chain icon -->
+                            <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        </div>
+                        <h4>Identification of Existing Synergies</h4>
+                        <p>Identification of existing synergies among different production sectors, mapping potential material exchanges and resource sharing opportunities to highlight the most effective pathways for increasing levels of Industrial Symbiosis in the industrial areas.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-card-icon">
+                            <!-- Trending-up icon -->
+                            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                        </div>
+                        <h4>Identification of CE Drivers in IP</h4>
+                        <p>Identification of CE drivers in Industrial Parks, defining the set of factors enabling circular entrepreneurship and Industrial Symbiosis experiences through analysis of national and international best practices and enabling conditions.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-card-icon">
+                            <!-- Layers icon -->
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        </div>
+                        <h4>Definition of Development Models</h4>
+                        <p>Definition of Development Models allowing to increase the &lsquo;symbiotic potential&rsquo; of the reference context, exploiting available synergies, structures, facilities and flows, and integrating all findings into an actionable framework for the IP.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 48px; margin-bottom: 32px;">Outcomes</h3>
+
+                <div class="outcomes-list">
+                    <div class="outcome-card">
+                        <div class="outcome-content">
+                            <h4>1. Existing Synergies Identification</h4>
+                            <p>
+                                Identification of existing synergies among different production sectors. The analysis mapped potential material exchanges and resource sharing opportunities across the Fosso Imperatore IP and surrounding territory, revealing that successful initiatives balance top-down coordination with bottom-up participation, avoiding both excessive centralization and complete reliance on spontaneous self-organization.
+                            </p>
+                        </div>
+                        <div class="outcome-visual">
+                            <img src="images/ra/ra3-outcome-1.svg" alt="Outcome 1 diagram">
+                            <div class="outcome-caption">Figure 1: Potential synergies and material exchange opportunities identified</div>
+                        </div>
+                    </div>
+
+                    <div class="outcome-card">
+                        <div class="outcome-content">
+                            <h4>2. CE Drivers in Industrial Parks</h4>
+                            <p>
+                                Identification of CE drivers in IP. The research found that economic viability proves more influential than environmental benefits in sustaining participation &mdash; circular initiatives succeed when they reduce costs or generate revenue, with environmental gains functioning as supplementary rather than primary motivations. A catalogue of potential interventions was developed, organized across organizational mechanisms, governance structures, and infrastructure investments.
+                            </p>
+                        </div>
+                        <div class="outcome-visual">
+                            <img src="images/ra/ra3-outcome-2.svg" alt="Outcome 2 diagram">
+                            <div class="outcome-caption">Figure 2: Classification of CE drivers and enabling factors for IPs</div>
+                        </div>
+                    </div>
+
+                    <div class="outcome-card">
+                        <div class="outcome-content">
+                            <h4>3. Development Model Definition</h4>
+                            <p>
+                                Definition of Development Models allowing to increase the &lsquo;symbiotic potential&rsquo; of the reference context, exploiting available synergies, structures, facilities and flows. The model emphasizes phased implementation beginning with visible, low-risk exchanges to build organizational capacity before attempting complex multi-party arrangements. Only three interventions from the full catalogue passed the feasibility screening: digital waste matching platforms, logistics coordination, and aggregated collection.
+                            </p>
+                        </div>
+                        <div class="outcome-visual">
+                            <img src="images/ra/ra3-outcome-3.svg" alt="Outcome 3 diagram">
+                            <div class="outcome-caption">Figure 3: Comprehensive Development Model for IP circular transition</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-box">
+                    <h4>Deliverable D.3</h4>
+                    <p>Report detailing the Development Model &mdash; Identification of the set of factors enabling circular entrepreneurship; a systematic collection of the main international and national best practices in the fields of IS and CE in industrial areas; Definition of interventions and incentives boosting synergies and cooperative behaviours among firms.</p>
+                </div>
+
+                <!-- Navigation between RAs -->
+                <div style="display: flex; justify-content: space-between; margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--gray-200);">
+                    <a href="ra2.html" style="text-decoration: none;">
+                        <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray-500);">Previous</span>
+                        <p style="margin: 4px 0 0; font-weight: 600; color: var(--primary-600);">&larr; RA2 &mdash; Context Analysis</p>
+                    </a>
+                    <a href="ra4.html" style="text-align: right; text-decoration: none;">
+                        <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray-500);">Next</span>
+                        <p style="margin: 4px 0 0; font-weight: 600; color: var(--primary-600);">RA4 &mdash; Development Plan &rarr;</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">CE_IPsa</div>
+                    <p>
+                        A Development Model for Circular Economy between Industrial Parks and Surroundings Areas.
+                        A PRIN 2022 PNRR research project.
+                    </p>
+                    <div class="footer-funding">
+                        <div class="footer-funding-text">
+                            Funded by the European Union &ndash; NextGenerationEU under the Italian Ministry of University and Research (MUR) as part of the PRIN 2022 PNRR program.
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Research</h4>
+                    <ul class="footer-links">
+                        <li><a href="ra1.html">RA1 &ndash; Literature Review</a></li>
+                        <li><a href="ra2.html">RA2 &ndash; Context Analysis</a></li>
+                        <li><a href="ra3.html">RA3 &ndash; Development Model</a></li>
+                        <li><a href="ra4.html">RA4 &ndash; Development Plan</a></li>
+                        <li><a href="ra5.html">RA5 &ndash; DSS Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Dissemination</h4>
+                    <ul class="footer-links">
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="conferences.html">Conferences</a></li>
+                        <li><a href="special-issue.html">Special Issue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="contacts.html">Contact Us</a></li>
+                        <li><a href="team.html">Research Team</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023-2026 CE_IPsa Project. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.className = 'lightbox-modal';
+    lightbox.innerHTML = '<span class="lightbox-close">&times;</span><div class="lightbox-content"></div>';
+    document.body.appendChild(lightbox);
+    const lightboxContent = lightbox.querySelector('.lightbox-content');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    document.querySelectorAll('.outcome-visual img').forEach(img => {
+        img.addEventListener('click', e => {
+            e.stopPropagation();
+            const clone = img.cloneNode(true);
+            clone.style.width = '100%';
+            clone.style.height = 'auto';
+            clone.style.cursor = 'default';
+            lightboxContent.innerHTML = '';
+            lightboxContent.appendChild(clone);
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => { lightboxContent.innerHTML = ''; }, 300);
+    }
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
+    </script>
+</body>
+</html>

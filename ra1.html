@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RA1 — Theoretical Literature Review | CE_IPsa Project</title>
+    <meta name="description" content="Research Activity 1: Theoretical Literature Review on Industrial Symbiosis and Circular Economy methodologies, tools, and indicators.">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a5c2a'/%3E%3Ctext x='50' y='62' font-family='Georgia' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECE%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .ra-hero {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            margin-bottom: 48px;
+            border-radius: 16px;
+        }
+        .ra-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .ra-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 92, 42, 0.88) 0%, rgba(35, 122, 56, 0.72) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ra-hero-text {
+            text-align: center;
+            color: white;
+            padding: 24px;
+        }
+        .ra-hero-text h2 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: white;
+        }
+        .ra-hero-text p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .objective-card {
+            background: var(--gray-50);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid var(--gray-200);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .objective-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .objective-card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-100);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        .objective-card-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--primary-600);
+            fill: none;
+            stroke-width: 2;
+        }
+        .objective-card h4 {
+            color: var(--primary-700);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .objective-card p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            margin: 0;
+            text-align: justify;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        .outcomes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .outcome-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: center;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .outcome-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .outcome-content h4 {
+            color: var(--primary-700);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+        .outcome-content p {
+            color: var(--gray-600);
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .outcome-visual {
+            background: var(--gray-50);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+        }
+        .outcome-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-50) 0%, var(--primary-100) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-600);
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-align: center;
+            padding: 20px;
+        }
+        .outcome-visual img {
+            width: 100%;
+            height: 250px;
+            display: block;
+            cursor: zoom-in;
+            transition: filter 0.2s;
+        }
+        .outcome-visual img:hover {
+            filter: brightness(0.95);
+        }
+        .outcome-caption {
+            padding: 12px;
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            text-align: center;
+            background: white;
+            border-top: 1px solid var(--gray-100);
+            font-style: italic;
+        }
+        .project-info-box {
+            margin-bottom: 48px;
+            padding: 24px;
+            background: var(--primary-50);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-500);
+            width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+        }
+        .deliverable-box {
+            margin-top: 48px;
+            padding: 24px;
+            background: var(--gray-50);
+            border-radius: 16px;
+            border: 1px solid var(--gray-200);
+            border-left: 4px solid var(--accent-gold);
+        }
+        .deliverable-box h4 {
+            color: var(--primary-700);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .deliverable-box p {
+            color: var(--gray-600);
+            margin: 0;
+        }
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .outcome-card {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+        @media (max-width: 768px) {
+            .project-info-box {
+                width: 100%;
+            }
+        }
+        .lightbox-modal {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            cursor: zoom-out;
+        }
+        .lightbox-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox-content {
+            width: 90vw;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            cursor: default;
+            background: #ffffff;
+            padding: 24px;
+        }
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .lightbox-modal.active .lightbox-content {
+            transform: scale(1);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+        .lightbox-close:hover {
+            color: var(--primary-200);
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-logo-bar">
+    <div class="top-logo-bar-container">
+        <img src="images/logos/logo1.png" alt="Funded by EU">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo2.png" alt="MUR">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo3.png" alt="Italia Domani">
+        <span class="logo-divider"></span>
+        <img src="images/logos/logo5.png" alt="University of Naples L'Orientale">
+        <img src="images/logos/logo4.png" alt="University of Messina">
+    </div>
+</div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-main">
+                    <span class="logo-text">CE_IPsa</span>
+                    <span class="logo-badge">PRIN 2022 PNRR</span>
+                </div>
+                <div class="logo-codes">
+                    <span class="code-item">Project: P20227NFA4;</span>
+                    <span class="code-item">CUP UniOr: C53D23008770001</span>
+                    <span class="code-divider">-</span>
+                    <span class="code-item">CUP UniMe: J53D23016630001</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Research Activities
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="ra1.html">RA1 &ndash; Literature Review</a>
+                        <a href="ra2.html">RA2 &ndash; Context Analysis</a>
+                        <a href="ra3.html">RA3 &ndash; Development Model</a>
+                        <a href="ra4.html">RA4 &ndash; Development Plan</a>
+                        <a href="ra5.html">RA5 &ndash; DSS Development</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Dissemination
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="publications.html">Publications</a>
+                        <a href="conferences.html">Conferences</a>
+                        <a href="special-issue.html">Special Issue</a>
+                    </div>
+                </li>
+                <li><a href="contacts.html">Contact Us</a></li>
+            </ul>
+            <button class="nav-close" id="navClose" aria-label="Close menu">&times;</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="#">Research Activities</a>
+                <span>/</span>
+                <span>RA1</span>
+            </nav>
+            <h1>RA1 &mdash; Theoretical Literature Review</h1>
+            <p>Building a robust theoretical background on IS/CE concepts, methodologies, tools, and indicators</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="content-wrapper" style="max-width: 900px; margin: 0 auto;">
+
+                <!-- Hero Image - PLACEHOLDER -->
+                <div class="ra-hero">
+                    <img src="images/ra/ra1-placeholder.jpg" alt="Literature review and academic research on Circular Economy" loading="lazy"
+                         onerror="this.style.display='none'; this.parentElement.querySelector('.ra-hero-overlay').style.background='linear-gradient(135deg, rgba(26,92,42,0.95) 0%, rgba(35,122,56,0.85) 100%)';">
+                    <div class="ra-hero-overlay">
+                        <div class="ra-hero-text">
+                            <h2>Studying Phase</h2>
+                            <p>Survey of the state of the art on IS/CE in Industrial Areas</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- IMAGE NOTE: Ideal image - academic/library setting, open books with diagrams about circular economy, or an abstract visualization of interconnected research concepts -->
+
+                <div class="section-header text-left" style="max-width: 100%; margin-bottom: 40px;">
+                    <span class="section-badge">Research Activity 1</span>
+                    <h2 class="section-title text-left">Overview</h2>
+                </div>
+
+                <p class="lead" style="margin-bottom: 32px; text-align: justify;">
+                    RA1 provides the theoretical foundation for the entire CE_IPsa project. This "Studying" phase constructs a robust theoretical background on the main techniques, methodologies and tools for studying, planning and measuring the evolution of Industrial Symbiosis (IS) and Circular Economy (CE) in Industrial Areas. The activity refers to the keywords "Circular Economy" and "Industrial Symbiosis".
+                </p>
+                <p style="margin-bottom: 32px; text-align: justify; color: var(--gray-600);">
+                    The review is structured around four main research dimensions: (1) the conceptualization and evolution of IS and CE, (2) the methodological approaches and tools developed for implementation, (3) the measurement and evaluation methods for assessing symbiotic and circular production patterns, and (4) the roles and interactions of actors involved in circular production systems. This systematic collection of contributions provides the empirical and theoretical bedrock upon which all subsequent Research Activities are built.
+                </p>
+
+                <div class="project-info-box">
+                    <p style="margin: 0; color: var(--gray-700);"><strong>Duration:</strong> Year 1 &mdash; Bimester 1</p>
+                    <p style="margin: 8px 0 0; color: var(--gray-700);"><strong>Status:</strong> <span style="background: #10b981; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Completed</span></p>
+                    <p style="margin: 8px 0 0; color: var(--gray-700);"><strong>Lead:</strong> RU2 &mdash; University of Messina</p>
+                </div>
+
+                <h3 style="margin-top: 48px; margin-bottom: 24px;">Key Objectives</h3>
+
+                <div class="features-grid">
+                    <div class="objective-card">
+                        <div class="objective-card-icon">
+                            <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        </div>
+                        <h4>CE/IS Concepts &amp; Types</h4>
+                        <p>Definition of current Industrial Symbiosis and Circular Economy concepts and types, tracing the evolution from pre-1990s frameworks through current paradigms and identifying three primary IS implementation models: self-organized networks, centrally planned Eco-Industrial Parks, and facilitated networks.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-card-icon">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                        </div>
+                        <h4>Methods, Approaches &amp; Tools</h4>
+                        <p>Analysis of the main methodological approaches and tools developed for implementing and studying IS, including Material Flow Analysis, Life Cycle Assessment, Network Analysis, Agent-Based Modeling, and strategic assessment methodologies.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-card-icon">
+                            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
+                        <h4>Indicators &amp; Measurement</h4>
+                        <p>Identification of the main approaches (methods and indicators) for measuring and evaluating symbiotic and circular production patterns, critically reviewing hundreds of CE metrics across multiple frameworks to assess their applicability at micro- and meso-level.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="objective-card-icon">
+                            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h4>Actors &amp; Stakeholders</h4>
+                        <p>Systematic review of the literature on the actors involved (firms, companies, governments) in relation to the circular production issue, analyzing roles, interactions, and the complex dynamics between economic incentives, regulatory frameworks, trust mechanisms, and information availability.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 48px; margin-bottom: 32px;">Outcomes</h3>
+
+                <div class="outcomes-list">
+                    <div class="outcome-card">
+                        <div class="outcome-content">
+                            <h4>1. CE/IS Definitional Framework</h4>
+                            <p>
+                                A comprehensive definitional framework was developed tracing the evolution of Circular Economy and Industrial Symbiosis from early concepts to current paradigms. The review identified three primary IS implementation models: (a) self-organized networks emerging from market dynamics, (b) centrally planned Eco-Industrial Parks (EIPs), and (c) facilitated networks supported by intermediary organizations. The analysis demonstrates that successful symbiotic relationships depend not merely on technical feasibility but on complex interactions between economic incentives, regulatory frameworks, trust mechanisms, and information availability.
+                            </p>
+                        </div>
+                        <div class="outcome-visual">
+                            <img src="images/ra/ra1-outcome-1.svg" alt="Outcome 1 diagram">
+                            <div class="outcome-caption">Figure 1: Conceptual framework of IS/CE concepts and implementation models</div>
+                        </div>
+                    </div>
+
+                    <div class="outcome-card">
+                        <div class="outcome-content">
+                            <h4>2. Methods &amp; Tools Analysis</h4>
+                            <p>
+                                A critical analysis of the main analytical tools for IS/CE implementation was conducted, covering Material Flow Analysis (MFA), Life Cycle Assessment (LCA), Network Analysis, and Agent-Based Modeling (ABM). The review highlighted that the most advanced research emphasizes interdisciplinary integration, combining quantitative metrics with qualitative insights and leveraging advanced computation. Each methodology was assessed in terms of applicability, data requirements, and suitability for different spatial scales.
+                            </p>
+                        </div>
+                        <div class="outcome-visual">
+                            <img src="images/ra/ra1-outcome-2.svg" alt="Outcome 2 diagram">
+                            <div class="outcome-caption">Figure 2: Key aspects and comparison of IS analytical tools</div>
+                        </div>
+                    </div>
+
+                    <div class="outcome-card">
+                        <div class="outcome-content">
+                            <h4>3. Indicators Review</h4>
+                            <p>
+                                A systematic review of hundreds of CE metrics across multiple frameworks was performed. A critical challenge was identified: the lack of standardization across methodologies, with most indicators requiring comprehensive data unavailable in SME contexts. The review provided the basis for selecting and developing indicators applicable at the micro- (industrial park) and meso- (territorial) levels, informing the indicator framework later developed in RA4.
+                            </p>
+                        </div>
+                        <div class="outcome-visual">
+                            <img src="images/ra/ra1-outcome-3.svg" alt="Outcome 3 diagram">
+                            <div class="outcome-caption">Figure 3: Classification of circularity measurement approaches and indicators</div>
+                        </div>
+                    </div>
+
+                    <div class="outcome-card">
+                        <div class="outcome-content">
+                            <h4>4. Stakeholder Roles Mapping</h4>
+                            <p>
+                                The systematic review mapped the roles of actors involved in circular production systems, including firms, public administrations, intermediary organizations, and community stakeholders. The analysis revealed that information infrastructure and trust mechanisms require deliberate development rather than emerging spontaneously from technical opportunity, and that phased implementation beginning with visible, low-risk exchanges builds organizational capacity before attempting complex multi-party arrangements.
+                            </p>
+                        </div>
+                        <div class="outcome-visual">
+                            <img src="images/ra/ra1-outcome-4.svg" alt="Outcome 4 diagram">
+                            <div class="outcome-caption">Figure 4: Mapping of actors involved in circular production systems</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-box">
+                    <h4>Deliverable D.1</h4>
+                    <p>Integrated Report on the State of the Art &mdash; A systematic collection of contributions of the literature on industrial symbiosis, industrial metabolism and symbiotic solutions and tools applicable, indicators of symbiosis and circularity, and role of actors and communities.</p>
+                </div>
+
+                <!-- Navigation between RAs -->
+                <div style="display: flex; justify-content: space-between; margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--gray-200);">
+                    <div style="opacity: 0.4;">
+                        <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray-500);">Previous</span>
+                        <p style="margin: 4px 0 0; font-weight: 600; color: var(--gray-600);">&mdash;</p>
+                    </div>
+                    <a href="ra2.html" style="text-align: right; text-decoration: none;">
+                        <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gray-500);">Next</span>
+                        <p style="margin: 4px 0 0; font-weight: 600; color: var(--primary-600);">RA2 &mdash; Context Analysis &rarr;</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">CE_IPsa</div>
+                    <p>
+                        A Development Model for Circular Economy between Industrial Parks and Surroundings Areas.
+                        A PRIN 2022 PNRR research project.
+                    </p>
+                    <div class="footer-funding">
+                        <div class="footer-funding-text">
+                            Funded by the European Union &ndash; NextGenerationEU under the Italian Ministry of University and Research (MUR) as part of the PRIN 2022 PNRR program.
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Research</h4>
+                    <ul class="footer-links">
+                        <li><a href="ra1.html">RA1 &ndash; Literature Review</a></li>
+                        <li><a href="ra2.html">RA2 &ndash; Context Analysis</a></li>
+                        <li><a href="ra3.html">RA3 &ndash; Development Model</a></li>
+                        <li><a href="ra4.html">RA4 &ndash; Development Plan</a></li>
+                        <li><a href="ra5.html">RA5 &ndash; DSS Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Dissemination</h4>
+                    <ul class="footer-links">
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="conferences.html">Conferences</a></li>
+                        <li><a href="special-issue.html">Special Issue</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="contacts.html">Contact Us</a></li>
+                        <li><a href="team.html">Research Team</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023-2026 CE_IPsa Project. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.className = 'lightbox-modal';
+    lightbox.innerHTML = '<span class="lightbox-close">&times;</span><div class="lightbox-content"></div>';
+    document.body.appendChild(lightbox);
+    const lightboxContent = lightbox.querySelector('.lightbox-content');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    document.querySelectorAll('.outcome-visual img').forEach(img => {
+        img.addEventListener('click', e => {
+            e.stopPropagation();
+            const clone = img.cloneNode(true);
+            clone.style.width = '100%';
+            clone.style.height = 'auto';
+            clone.style.cursor = 'default';
+            lightboxContent.innerHTML = '';
+            lightboxContent.appendChild(clone);
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => { lightboxContent.innerHTML = ''; }, 300);
+    }
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
+    </script>
+</body>
+</html>

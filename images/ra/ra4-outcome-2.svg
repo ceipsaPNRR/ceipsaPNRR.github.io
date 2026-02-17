@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280">
+                                <!-- Title -->
+                                <text x="250" y="18" font-family="Arial,sans-serif" font-size="11" fill="#1a5c2a" text-anchor="middle" font-weight="bold">Sector Compatibility Matrix (20 companies, 10 ATECO sectors)</text>
+
+                                <!-- Column headers -->
+                                <text x="195" y="42" font-family="Arial,sans-serif" font-size="9" fill="#1a5c2a" text-anchor="middle" font-weight="600">Metal</text>
+                                <text x="195" y="51" font-family="Arial,sans-serif" font-size="7" fill="#6b7280" text-anchor="middle">(C25)</text>
+                                <text x="237" y="42" font-family="Arial,sans-serif" font-size="9" fill="#1a5c2a" text-anchor="middle" font-weight="600">Plastics</text>
+                                <text x="237" y="51" font-family="Arial,sans-serif" font-size="7" fill="#6b7280" text-anchor="middle">(C22)</text>
+                                <text x="279" y="42" font-family="Arial,sans-serif" font-size="9" fill="#1a5c2a" text-anchor="middle" font-weight="600">Food</text>
+                                <text x="279" y="51" font-family="Arial,sans-serif" font-size="7" fill="#6b7280" text-anchor="middle">(C10)</text>
+                                <text x="321" y="42" font-family="Arial,sans-serif" font-size="9" fill="#1a5c2a" text-anchor="middle" font-weight="600">Paper</text>
+                                <text x="321" y="51" font-family="Arial,sans-serif" font-size="7" fill="#6b7280" text-anchor="middle">(C17)</text>
+                                <text x="363" y="42" font-family="Arial,sans-serif" font-size="9" fill="#1a5c2a" text-anchor="middle" font-weight="600">Textile</text>
+                                <text x="363" y="51" font-family="Arial,sans-serif" font-size="7" fill="#6b7280" text-anchor="middle">(C13)</text>
+
+                                <!-- Row labels -->
+                                <text x="168" y="76" font-family="Arial,sans-serif" font-size="9" fill="#1a5c2a" text-anchor="end" font-weight="600">Metal (C25)</text>
+                                <text x="168" y="118" font-family="Arial,sans-serif" font-size="9" fill="#1a5c2a" text-anchor="end" font-weight="600">Plastics (C22)</text>
+                                <text x="168" y="160" font-family="Arial,sans-serif" font-size="9" fill="#1a5c2a" text-anchor="end" font-weight="600">Food (C10)</text>
+                                <text x="168" y="202" font-family="Arial,sans-serif" font-size="9" fill="#1a5c2a" text-anchor="end" font-weight="600">Paper (C17)</text>
+                                <text x="168" y="244" font-family="Arial,sans-serif" font-size="9" fill="#1a5c2a" text-anchor="end" font-weight="600">Textile (C13)</text>
+
+                                <!-- Row 0: Metal - Self, YES, YES, YES, NO -->
+                                <rect x="175" y="58" width="40" height="40" rx="3" fill="#6b7280" opacity="0.5"/>
+                                <text x="195" y="83" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">--</text>
+                                <rect x="217" y="58" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="237" y="83" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="259" y="58" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="279" y="83" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="301" y="58" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="321" y="83" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="343" y="58" width="40" height="40" rx="3" fill="#e8f5e9" stroke="#c8e6c9" stroke-width="1"/>
+                                <text x="363" y="83" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">0</text>
+
+                                <!-- Row 1: Plastics - YES, Self, YES, NO, YES -->
+                                <rect x="175" y="100" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="195" y="125" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="217" y="100" width="40" height="40" rx="3" fill="#6b7280" opacity="0.5"/>
+                                <text x="237" y="125" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">--</text>
+                                <rect x="259" y="100" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="279" y="125" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="301" y="100" width="40" height="40" rx="3" fill="#e8f5e9" stroke="#c8e6c9" stroke-width="1"/>
+                                <text x="321" y="125" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">0</text>
+                                <rect x="343" y="100" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="363" y="125" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+
+                                <!-- Row 2: Food - YES, YES, Self, YES, NO -->
+                                <rect x="175" y="142" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="195" y="167" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="217" y="142" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="237" y="167" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="259" y="142" width="40" height="40" rx="3" fill="#6b7280" opacity="0.5"/>
+                                <text x="279" y="167" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">--</text>
+                                <rect x="301" y="142" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="321" y="167" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="343" y="142" width="40" height="40" rx="3" fill="#e8f5e9" stroke="#c8e6c9" stroke-width="1"/>
+                                <text x="363" y="167" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">0</text>
+
+                                <!-- Row 3: Paper - YES, NO, YES, Self, NO -->
+                                <rect x="175" y="184" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="195" y="209" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="217" y="184" width="40" height="40" rx="3" fill="#e8f5e9" stroke="#c8e6c9" stroke-width="1"/>
+                                <text x="237" y="209" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">0</text>
+                                <rect x="259" y="184" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="279" y="209" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="301" y="184" width="40" height="40" rx="3" fill="#6b7280" opacity="0.5"/>
+                                <text x="321" y="209" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">--</text>
+                                <rect x="343" y="184" width="40" height="40" rx="3" fill="#e8f5e9" stroke="#c8e6c9" stroke-width="1"/>
+                                <text x="363" y="209" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">0</text>
+
+                                <!-- Row 4: Textile - NO, YES, NO, NO, Self -->
+                                <rect x="175" y="226" width="40" height="40" rx="3" fill="#e8f5e9" stroke="#c8e6c9" stroke-width="1"/>
+                                <text x="195" y="251" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">0</text>
+                                <rect x="217" y="226" width="40" height="40" rx="3" fill="#2d8f45"/>
+                                <text x="237" y="251" font-family="Arial,sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">&#10003;</text>
+                                <rect x="259" y="226" width="40" height="40" rx="3" fill="#e8f5e9" stroke="#c8e6c9" stroke-width="1"/>
+                                <text x="279" y="251" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">0</text>
+                                <rect x="301" y="226" width="40" height="40" rx="3" fill="#e8f5e9" stroke="#c8e6c9" stroke-width="1"/>
+                                <text x="321" y="251" font-family="Arial,sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">0</text>
+                                <rect x="343" y="226" width="40" height="40" rx="3" fill="#6b7280" opacity="0.5"/>
+                                <text x="363" y="251" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">--</text>
+
+                                <!-- Legend -->
+                                <rect x="18" y="62" width="12" height="12" rx="2" fill="#2d8f45"/>
+                                <text x="34" y="73" font-family="Arial,sans-serif" font-size="8" fill="#1a5c2a">Compatible</text>
+                                <rect x="18" y="80" width="12" height="12" rx="2" fill="#e8f5e9" stroke="#c8e6c9" stroke-width="1"/>
+                                <text x="34" y="91" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">No match</text>
+                                <rect x="18" y="98" width="12" height="12" rx="2" fill="#6b7280" opacity="0.5"/>
+                                <text x="34" y="109" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Self</text>
+
+                                <!-- Bottom label -->
+                                <text x="270" y="278" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">20 manufacturing companies across 5 macro-sectors</text>
+                            </svg>

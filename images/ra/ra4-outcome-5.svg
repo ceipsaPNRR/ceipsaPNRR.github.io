@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280">
+                                <!-- Title -->
+                                <text x="250" y="24" font-family="Arial,sans-serif" font-size="12" fill="#1a5c2a" text-anchor="middle" font-weight="bold">Goal Programming: Best Compromise vs Ideal</text>
+                                <!-- Header row -->
+                                <rect x="15" y="40" width="470" height="32" rx="8" fill="#1a5c2a"/>
+                                <text x="75" y="60" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Material</text>
+                                <text x="195" y="60" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Public Subsidy</text>
+                                <text x="315" y="60" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Net Benefit</text>
+                                <text x="430" y="60" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Deviation</text>
+                                <!-- Row 1: Paper (green) -->
+                                <rect x="15" y="80" width="470" height="48" rx="8" fill="#2d8f45" opacity="0.15"/>
+                                <rect x="15" y="80" width="4" height="48" rx="2" fill="#2d8f45"/>
+                                <text x="75" y="100" font-family="Arial,sans-serif" font-size="12" fill="#1a5c2a" text-anchor="middle" font-weight="bold">Paper</text>
+                                <text x="75" y="116" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">best performer</text>
+                                <text x="195" y="108" font-family="Arial,sans-serif" font-size="13" fill="#237a38" text-anchor="middle" font-weight="bold">89.9%</text>
+                                <text x="315" y="108" font-family="Arial,sans-serif" font-size="13" fill="#237a38" text-anchor="middle" font-weight="bold">&#8364;4,409</text>
+                                <text x="430" y="108" font-family="Arial,sans-serif" font-size="13" fill="#2d8f45" text-anchor="middle" font-weight="bold">0%</text>
+                                <!-- Row 2: Iron (gold) -->
+                                <rect x="15" y="136" width="470" height="48" rx="8" fill="#c9a227" opacity="0.12"/>
+                                <rect x="15" y="136" width="4" height="48" rx="2" fill="#c9a227"/>
+                                <text x="75" y="156" font-family="Arial,sans-serif" font-size="12" fill="#1a5c2a" text-anchor="middle" font-weight="bold">Iron</text>
+                                <text x="75" y="172" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">moderate</text>
+                                <text x="195" y="164" font-family="Arial,sans-serif" font-size="13" fill="#c9a227" text-anchor="middle" font-weight="bold">81.2%</text>
+                                <text x="315" y="164" font-family="Arial,sans-serif" font-size="12" fill="#c9a227" text-anchor="middle" font-weight="600">&#8364;660 &#8211; &#8364;2,666</text>
+                                <text x="430" y="164" font-family="Arial,sans-serif" font-size="13" fill="#c9a227" text-anchor="middle" font-weight="bold">11&#8211;34%</text>
+                                <!-- Row 3: Aluminum (orange/red) -->
+                                <rect x="15" y="192" width="470" height="48" rx="8" fill="#d97706" opacity="0.12"/>
+                                <rect x="15" y="192" width="4" height="48" rx="2" fill="#d97706"/>
+                                <text x="75" y="212" font-family="Arial,sans-serif" font-size="12" fill="#1a5c2a" text-anchor="middle" font-weight="bold">Aluminum</text>
+                                <text x="75" y="228" font-family="Arial,sans-serif" font-size="8" fill="#6b7280" text-anchor="middle">sensitive</text>
+                                <text x="195" y="220" font-family="Arial,sans-serif" font-size="13" fill="#d97706" text-anchor="middle" font-weight="bold">83.8%</text>
+                                <text x="315" y="220" font-family="Arial,sans-serif" font-size="12" fill="#d97706" text-anchor="middle" font-weight="600">&#8364;0 &#8211; &#8364;126</text>
+                                <text x="430" y="220" font-family="Arial,sans-serif" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="bold">33&#8211;100%</text>
+                                <!-- Bottom line -->
+                                <line x1="15" y1="252" x2="485" y2="252" stroke="#c8e6c9" stroke-width="1"/>
+                                <text x="250" y="270" font-family="Arial,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Simplex algorithm via Goal Programming | Ideal vs Best Compromise scenarios</text>
+                            </svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280" font-family="Arial,sans-serif">
+                                <!-- Top: scattered dots representing hundreds of metrics -->
+                                <text x="250" y="18" text-anchor="middle" fill="#1a5c2a" font-size="10" font-weight="bold">Hundreds of CE Metrics</text>
+                                <!-- Clean scattered dots (8 uniform dots) -->
+                                <circle cx="150" cy="32" r="4" fill="#1a5c2a" opacity="0.7"/>
+                                <circle cx="190" cy="28" r="4" fill="#237a38" opacity="0.7"/>
+                                <circle cx="230" cy="34" r="4" fill="#2d8f45" opacity="0.7"/>
+                                <circle cx="270" cy="28" r="4" fill="#1a5c2a" opacity="0.7"/>
+                                <circle cx="310" cy="34" r="4" fill="#237a38" opacity="0.7"/>
+                                <circle cx="350" cy="30" r="4" fill="#2d8f45" opacity="0.7"/>
+                                <circle cx="210" cy="42" r="4" fill="#1a5c2a" opacity="0.6"/>
+                                <circle cx="290" cy="42" r="4" fill="#237a38" opacity="0.6"/>
+
+                                <!-- Clean funnel shape -->
+                                <path d="M140,54 L360,54 L360,58 C360,58 310,100 300,112 L300,118 L200,118 L200,112 C190,100 140,58 140,58 Z" fill="#e8f5e9" stroke="#237a38" stroke-width="1.5"/>
+                                <text x="250" y="76" text-anchor="middle" fill="#1a5c2a" font-size="10" font-weight="bold">Standardization</text>
+                                <text x="250" y="90" text-anchor="middle" fill="#c9a227" font-size="11" font-weight="bold">Gap</text>
+                                <!-- Downward arrow from funnel -->
+                                <line x1="250" y1="118" x2="250" y2="132" stroke="#237a38" stroke-width="2"/>
+                                <polygon points="244,130 250,138 256,130" fill="#237a38"/>
+
+                                <!-- Left column: Micro Level -->
+                                <rect x="40" y="142" width="190" height="128" rx="10" fill="#ffffff" stroke="#237a38" stroke-width="1.5"/>
+                                <rect x="40" y="142" width="190" height="30" rx="10" fill="#1a5c2a"/>
+                                <rect x="40" y="157" width="190" height="15" fill="#1a5c2a"/>
+                                <!-- Firm icon -->
+                                <rect x="56" y="148" width="14" height="12" fill="#ffffff" opacity="0.8" rx="1"/>
+                                <rect x="59" y="151" width="3" height="3" fill="#1a5c2a"/><rect x="64" y="151" width="3" height="3" fill="#1a5c2a"/>
+                                <rect x="59" y="155" width="3" height="3" fill="#1a5c2a"/><rect x="64" y="155" width="3" height="3" fill="#1a5c2a"/>
+                                <text x="80" y="161" fill="#ffffff" font-size="11" font-weight="bold">Micro Level</text>
+                                <text x="155" y="161" fill="#c8e6c9" font-size="7">(firm / park)</text>
+                                <!-- Items -->
+                                <circle cx="62" cy="192" r="3" fill="#c9a227"/>
+                                <text x="72" y="195" fill="#1a5c2a" font-size="10">Recovery Rate</text>
+                                <circle cx="62" cy="214" r="3" fill="#c9a227"/>
+                                <text x="72" y="217" fill="#1a5c2a" font-size="10">Waste Intensity</text>
+                                <circle cx="62" cy="236" r="3" fill="#c9a227"/>
+                                <text x="72" y="239" fill="#1a5c2a" font-size="10">Resource Productivity</text>
+
+                                <!-- Right column: Meso Level -->
+                                <rect x="270" y="142" width="190" height="128" rx="10" fill="#ffffff" stroke="#237a38" stroke-width="1.5"/>
+                                <rect x="270" y="142" width="190" height="30" rx="10" fill="#237a38"/>
+                                <rect x="270" y="157" width="190" height="15" fill="#237a38"/>
+                                <!-- Territory icon -->
+                                <path d="M286,150 L290,146 L296,152 L300,148 L304,156 L280,156 Z" fill="#ffffff" opacity="0.8"/>
+                                <text x="310" y="161" fill="#ffffff" font-size="11" font-weight="bold">Meso Level</text>
+                                <text x="388" y="161" fill="#c8e6c9" font-size="7">(territory)</text>
+                                <!-- Items -->
+                                <circle cx="292" cy="192" r="3" fill="#c9a227"/>
+                                <text x="302" y="195" fill="#1a5c2a" font-size="10">Network Density</text>
+                                <circle cx="292" cy="214" r="3" fill="#c9a227"/>
+                                <text x="302" y="217" fill="#1a5c2a" font-size="10">Circularity Rate</text>
+                                <circle cx="292" cy="236" r="3" fill="#c9a227"/>
+                                <text x="302" y="239" fill="#1a5c2a" font-size="10">Symbiosis Index</text>
+
+                                <!-- Connecting arrow between columns -->
+                                <line x1="230" y1="210" x2="265" y2="210" stroke="#c9a227" stroke-width="2"/>
+                                <polygon points="263,206 270,210 263,214" fill="#c9a227"/>
+                                <line x1="270" y1="210" x2="237" y2="210" stroke="#c9a227" stroke-width="0"/>
+                                <polygon points="237,206 230,210 237,214" fill="#c9a227"/>
+                            </svg>

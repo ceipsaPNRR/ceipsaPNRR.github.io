@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 280">
+  <!-- Generator: Adobe Illustrator 29.8.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 160)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3, .st4 {
+        stroke-width: 1.5px;
+      }
+
+      .st0, .st5 {
+        stroke: #2d8f45;
+      }
+
+      .st0, .st5, .st2, .st3, .st6, .st4, .st7 {
+        fill: none;
+      }
+
+      .st8 {
+        font-size: 20px;
+      }
+
+      .st8, .st9, .st10, .st11 {
+        fill: #1a5c2a;
+      }
+
+      .st8, .st10, .st12, .st13, .st14, .st11 {
+        isolation: isolate;
+      }
+
+      .st8, .st10, .st13, .st11 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .st1, .st2, .st4, .st7 {
+        stroke: #237a38;
+      }
+
+      .st1, .st13 {
+        fill: #fff;
+      }
+
+      .st10 {
+        font-size: 7px;
+      }
+
+      .st5, .st6, .st7 {
+        stroke-linecap: round;
+      }
+
+      .st5, .st7 {
+        stroke-width: 2.5px;
+      }
+
+      .st12 {
+        opacity: .9;
+      }
+
+      .st12, .st15 {
+        fill: #c9a227;
+      }
+
+      .st16 {
+        fill: #2d8f45;
+      }
+
+      .st13 {
+        font-size: 11px;
+      }
+
+      .st3, .st6 {
+        stroke: #c9a227;
+      }
+
+      .st6 {
+        stroke-width: 2px;
+      }
+
+      .st4 {
+        stroke-dasharray: 3 2;
+      }
+
+      .st14 {
+        fill: #6b7280;
+        font-family: ArialMT, Arial;
+        font-size: 7.5px;
+      }
+
+      .st11 {
+        font-size: 14px;
+      }
+
+      .st17 {
+        fill: #237a38;
+      }
+    </style>
+  </defs>
+  <rect class="st1" x="18" y="20" width="108" height="195" rx="10" ry="10"/>
+  <text class="st8" transform="translate(50.89 50)"><tspan x="0" y="0">MFA</tspan></text>
+  <text class="st14" transform="translate(49.7 68)"><tspan x="0" y="0">Material Flow</tspan></text>
+  <text class="st14" transform="translate(58.04 78)"><tspan x="0" y="0">Analysis</tspan></text>
+  <g>
+    <line class="st7" x1="44" y1="108" x2="92" y2="108"/>
+    <polygon class="st17" points="92 104 100 108 92 112 92 104"/>
+    <line class="st5" x1="44" y1="120" x2="92" y2="120"/>
+    <polygon class="st16" points="92 116 100 120 92 124 92 116"/>
+    <line class="st7" x1="44" y1="132" x2="92" y2="132"/>
+    <polygon class="st17" points="92 128 100 132 92 136 92 128"/>
+  </g>
+  <text class="st10" transform="translate(46.51 165)"><tspan x="0" y="0">Tracks material</tspan></text>
+  <text class="st10" transform="translate(44.2 176)"><tspan x="0" y="0">inputs &amp; outputs</tspan></text>
+  <rect class="st1" x="138" y="20" width="108" height="195" rx="10" ry="10"/>
+  <text class="st8" transform="translate(171.45 50)"><tspan x="0" y="0">LCA</tspan></text>
+  <text class="st14" transform="translate(175.54 68)"><tspan x="0" y="0">Life Cycle</tspan></text>
+  <text class="st14" transform="translate(171.58 78)"><tspan x="0" y="0">Assessment</tspan></text>
+  <g>
+    <rect class="st9" x="187" y="96" width="10" height="10" rx="2" ry="2"/>
+    <rect class="st17" x="204" y="113" width="10" height="10" rx="2" ry="2"/>
+    <rect class="st16" x="187" y="130" width="10" height="10" rx="2" ry="2"/>
+    <rect class="st17" x="170" y="113" width="10" height="10" rx="2" ry="2"/>
+    <g>
+      <line class="st3" x1="200" y1="102" x2="203.82" y2="108.37"/>
+      <polygon class="st15" points="206 112 200.84 108.14 203.66 108.1 205.02 105.63 206 112"/>
+    </g>
+    <g>
+      <line class="st3" x1="210" y1="128" x2="201.66" y2="132.87"/>
+      <polygon class="st15" points="198 135 201.93 129.89 201.93 132.71 204.39 134.1 198 135"/>
+    </g>
+    <g>
+      <line class="st3" x1="182" y1="136" x2="178.18" y2="129.63"/>
+      <polygon class="st15" points="176 126 181.16 129.86 178.34 129.9 176.98 132.37 176 126"/>
+    </g>
+    <g>
+      <line class="st3" x1="172" y1="110" x2="180.34" y2="105.13"/>
+      <polygon class="st15" points="184 103 180.07 108.11 180.07 105.29 177.61 103.9 184 103"/>
+    </g>
+  </g>
+  <text class="st10" transform="translate(166.13 165)"><tspan x="0" y="0">Cradle-to-grave</tspan></text>
+  <text class="st10" transform="translate(162.44 176)"><tspan x="0" y="0">impact evaluation</tspan></text>
+  <rect class="st1" x="258" y="20" width="108" height="195" rx="10" ry="10"/>
+  <text class="st11" transform="translate(284.38 46)"><tspan x="0" y="0">Network</tspan></text>
+  <text class="st11" transform="translate(283.21 62)"><tspan x="0" y="0">Analysis</tspan></text>
+  <text class="st14" transform="translate(274.69 78)"><tspan x="0" y="0">Graph-based methods</tspan></text>
+  <g>
+    <line class="st2" x1="296" y1="104" x2="328" y2="110"/>
+    <line class="st2" x1="296" y1="104" x2="304" y2="132"/>
+    <line class="st2" x1="328" y1="110" x2="304" y2="132"/>
+    <line class="st0" x1="328" y1="110" x2="330" y2="130"/>
+    <line class="st0" x1="304" y1="132" x2="330" y2="130"/>
+    <circle class="st9" cx="296" cy="104" r="5"/>
+    <circle class="st17" cx="328" cy="110" r="5"/>
+    <circle class="st9" cx="304" cy="132" r="5"/>
+    <circle class="st16" cx="330" cy="130" r="5"/>
+  </g>
+  <text class="st10" transform="translate(285.74 165)"><tspan x="0" y="0">Maps symbiotic</tspan></text>
+  <text class="st10" transform="translate(290.22 176)"><tspan x="0" y="0">relationships</tspan></text>
+  <rect class="st1" x="378" y="20" width="108" height="195" rx="10" ry="10"/>
+  <text class="st11" transform="translate(406.32 46)"><tspan x="0" y="0">Emergy</tspan></text>
+  <text class="st11" transform="translate(403.21 62)"><tspan x="0" y="0">Analysis</tspan></text>
+  <text class="st14" transform="translate(389.47 78)"><tspan x="0" y="0">Energy-based accounting</tspan></text>
+  <g>
+    <circle class="st12" cx="432" cy="118" r="10"/>
+    <line class="st6" x1="432" y1="100" x2="432" y2="105"/>
+    <line class="st6" x1="432" y1="131" x2="432" y2="136"/>
+    <line class="st6" x1="414" y1="118" x2="419" y2="118"/>
+    <line class="st6" x1="445" y1="118" x2="450" y2="118"/>
+    <line class="st6" x1="419" y1="105" x2="423" y2="109"/>
+    <line class="st6" x1="441" y1="109" x2="445" y2="105"/>
+    <line class="st6" x1="419" y1="131" x2="423" y2="127"/>
+    <line class="st6" x1="441" y1="127" x2="445" y2="131"/>
+  </g>
+  <text class="st10" transform="translate(407.69 165)"><tspan x="0" y="0">Unified energy</tspan></text>
+  <text class="st10" transform="translate(402.04 176)"><tspan x="0" y="0">value assessment</tspan></text>
+  <rect class="st9" x="18" y="237" width="468" height="28" rx="8" ry="8"/>
+  <text class="st13" transform="translate(177.57 255)"><tspan x="0" y="0">Interdisciplinary Integration</tspan></text>
+  <line class="st4" x1="72" y1="215" x2="72" y2="237"/>
+  <line class="st4" x1="192" y1="215" x2="192" y2="237"/>
+  <line class="st4" x1="432" y1="215" x2="432" y2="237"/>
+  <line class="st4" x1="312" y1="215" x2="312" y2="237"/>
+  <circle class="st15" cx="312" cy="214" r="3"/>
+  <circle class="st15" cx="72" cy="214" r="3"/>
+  <circle class="st15" cx="192" cy="214" r="3"/>
+  <circle class="st15" cx="432" cy="214" r="3"/>
+</svg>

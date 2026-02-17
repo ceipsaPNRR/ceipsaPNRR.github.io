@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280">
+                                <!-- Title -->
+                                <text x="250" y="22" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1a5c2a" text-anchor="middle">Resource Flow Assessment</text>
+                                <!-- Left label -->
+                                <text x="18" y="150" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#6b7280" text-anchor="middle" transform="rotate(-90,18,150)">Waste Sources</text>
+                                <!-- Plastics bar -->
+                                <rect x="40" y="38" width="340" height="68" rx="6" fill="#e07b39" opacity="0.92"/>
+                                <text x="52" y="68" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Plastics</text>
+                                <text x="52" y="88" font-family="Arial,sans-serif" font-size="11" fill="#ffffff">1,775 t/year</text>
+                                <!-- Arrow tip plastics -->
+                                <polygon points="380,42 395,72 380,102" fill="#e07b39" opacity="0.92"/>
+                                <!-- Organic bar -->
+                                <rect x="40" y="116" width="190" height="40" rx="6" fill="#2d8f45" opacity="0.92"/>
+                                <text x="52" y="140" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Organic</text>
+                                <text x="140" y="140" font-family="Arial,sans-serif" font-size="11" fill="#ffffff">688 t</text>
+                                <polygon points="230,120 242,136 230,152" fill="#2d8f45" opacity="0.92"/>
+                                <!-- Metal bar -->
+                                <rect x="40" y="166" width="130" height="34" rx="6" fill="#5b8fa8" opacity="0.92"/>
+                                <text x="52" y="187" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Metal</text>
+                                <text x="110" y="187" font-family="Arial,sans-serif" font-size="11" fill="#ffffff">319 t</text>
+                                <polygon points="170,169 181,183 170,197" fill="#5b8fa8" opacity="0.92"/>
+                                <!-- Paper bar -->
+                                <rect x="40" y="210" width="90" height="28" rx="6" fill="#c9a227" opacity="0.92"/>
+                                <text x="52" y="228" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Paper</text>
+                                <text x="97" y="228" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">187 t</text>
+                                <polygon points="130,213 139,224 130,235" fill="#c9a227" opacity="0.92"/>
+                                <!-- Right total -->
+                                <rect x="410" y="100" width="82" height="60" rx="10" fill="#1a5c2a"/>
+                                <text x="451" y="120" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">TOTAL</text>
+                                <text x="451" y="140" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">~2,969</text>
+                                <text x="451" y="154" font-family="Arial,sans-serif" font-size="9" fill="#c8e6c9" text-anchor="middle">t/year</text>
+                                <!-- Converging lines to total -->
+                                <line x1="395" y1="72" x2="410" y2="120" stroke="#e07b39" stroke-width="1.5" opacity="0.5"/>
+                                <line x1="242" y1="136" x2="410" y2="130" stroke="#2d8f45" stroke-width="1.5" opacity="0.5"/>
+                                <line x1="181" y1="183" x2="410" y2="140" stroke="#5b8fa8" stroke-width="1.5" opacity="0.5"/>
+                                <line x1="139" y1="224" x2="410" y2="150" stroke="#c9a227" stroke-width="1.5" opacity="0.5"/>
+                                <!-- Legend dots -->
+                                <circle cx="55" y="268" cy="268" r="5" fill="#e07b39"/>
+                                <text x="65" y="272" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Plastics (59.8%)</text>
+                                <circle cx="155" cy="268" r="5" fill="#2d8f45"/>
+                                <text x="165" y="272" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Organic (23.2%)</text>
+                                <circle cx="255" cy="268" r="5" fill="#5b8fa8"/>
+                                <text x="265" y="272" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Metal (10.7%)</text>
+                                <circle cx="345" cy="268" r="5" fill="#c9a227"/>
+                                <text x="355" y="272" font-family="Arial,sans-serif" font-size="8" fill="#6b7280">Paper (6.3%)</text>
+                            </svg>

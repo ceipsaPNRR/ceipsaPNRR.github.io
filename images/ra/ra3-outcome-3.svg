@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 280">
+  <!-- Generator: Adobe Illustrator 29.8.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 160)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19, .st20, .st21 {
+        isolation: isolate;
+      }
+
+      .st0, .st2, .st5, .st22, .st9, .st15 {
+        fill: #1a5c2a;
+      }
+
+      .st0, .st2, .st9, .st11, .st14, .st15, .st21 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .st0, .st14 {
+        font-size: 9px;
+      }
+
+      .st1 {
+        fill: #237a38;
+        opacity: .18;
+      }
+
+      .st1, .st23, .st24, .st25, .st26, .st27 {
+        stroke-width: 1.5px;
+      }
+
+      .st1, .st13 {
+        stroke: #237a38;
+      }
+
+      .st2 {
+        font-size: 13px;
+      }
+
+      .st3, .st8, .st19 {
+        opacity: .88;
+      }
+
+      .st3, .st17 {
+        fill: #c9a227;
+      }
+
+      .st4 {
+        font-size: 8.5px;
+      }
+
+      .st4, .st23, .st28, .st24, .st11, .st25, .st21 {
+        fill: #fff;
+      }
+
+      .st4, .st10, .st20 {
+        font-family: ArialMT, Arial;
+      }
+
+      .st5 {
+        opacity: .9;
+      }
+
+      .st29 {
+        fill: #e8f5e9;
+      }
+
+      .st23 {
+        stroke: #5b8fa8;
+      }
+
+      .st6 {
+        fill: #5b8fa8;
+      }
+
+      .st6, .st16, .st17 {
+        opacity: .6;
+      }
+
+      .st7 {
+        stroke: #2563eb;
+      }
+
+      .st7, .st12, .st18 {
+        opacity: .5;
+      }
+
+      .st30, .st13, .st26, .st27 {
+        fill: none;
+      }
+
+      .st8 {
+        fill: #2563eb;
+      }
+
+      .st9, .st20 {
+        font-size: 7.5px;
+      }
+
+      .st31 {
+        fill: #fef9e7;
+      }
+
+      .st10 {
+        font-size: 7px;
+      }
+
+      .st10, .st14, .st20 {
+        fill: #6b7280;
+      }
+
+      .st24, .st18 {
+        stroke: #c9a227;
+      }
+
+      .st11 {
+        font-size: 10px;
+      }
+
+      .st12, .st25 {
+        stroke: #2d8f45;
+      }
+
+      .st13 {
+        opacity: .4;
+        stroke-width: .5px;
+      }
+
+      .st15 {
+        font-size: 8px;
+      }
+
+      .st16, .st19 {
+        fill: #2d8f45;
+      }
+
+      .st32 {
+        fill: #eef6fa;
+      }
+
+      .st21 {
+        font-size: 9.5px;
+      }
+
+      .st26 {
+        stroke: #fff;
+      }
+
+      .st27 {
+        stroke: #1a5c2a;
+      }
+    </style>
+  </defs>
+  <polyline class="st27" points="148 65 135 65 135 194 135.88 194 74 194 74 185"/>
+  <line class="st27" x1="135" y1="129" x2="148" y2="129"/>
+  <line class="st27" x1="135" y1="194" x2="148" y2="194"/>
+  <text class="st2" transform="translate(156.83 20)"><tspan x="0" y="0">Development Model Definition</tspan></text>
+  <polygon class="st1" points="15 38 135 38 110 185 40 185 15 38"/>
+  <text class="st15" transform="translate(43.89 55)"><tspan x="0" y="0">Full intervention</tspan></text>
+  <text class="st15" transform="translate(56.33 65)"><tspan x="0" y="0">catalogue</tspan></text>
+  <line class="st13" x1="35" y1="85" x2="115" y2="85"/>
+  <text class="st20" transform="translate(58.33 100)"><tspan x="0" y="0">Feasibility</tspan></text>
+  <text class="st20" transform="translate(58.74 110)"><tspan x="0" y="0">screening</tspan></text>
+  <line class="st13" x1="45" y1="130" x2="105" y2="130"/>
+  <text class="st20" transform="translate(62.15 145)"><tspan x="0" y="0">Viability</tspan></text>
+  <text class="st20" transform="translate(54.99 155)"><tspan x="0" y="0">assessment</tspan></text>
+  <path class="st30" d=""/>
+  <path class="st22" d="M148,62" marker-end="url(#arrowRA3m)"/>
+  <path class="st30" d=""/>
+  <path class="st22" d="M148,127" marker-end="url(#arrowRA3m)"/>
+  <path class="st30" d=""/>
+  <path class="st22" d="M148,192" marker-end="url(#arrowRA3m)"/>
+  <text class="st9" transform="translate(61.24 215)"><tspan x="0" y="0">3 viable</tspan></text>
+  <text class="st9" transform="translate(51.45 225)"><tspan x="0" y="0">interventions</tspan></text>
+  <rect class="st25" x="148" y="35" width="140" height="55" rx="8" ry="8"/>
+  <rect class="st29" x="156" y="45" width="26" height="20" rx="3" ry="3"/>
+  <rect class="st16" x="160" y="49" width="18" height="12" rx="2" ry="2"/>
+  <rect class="st28" x="164" y="53" width="10" height="4" rx="1" ry="1"/>
+  <text class="st0" transform="translate(192 56)"><tspan x="0" y="0">Digital Waste</tspan></text>
+  <text class="st0" transform="translate(192 68)"><tspan x="0" y="0">Platform</tspan></text>
+  <text class="st10" transform="translate(192 82)"><tspan x="0" y="0">Matching &amp; tracking</tspan></text>
+  <rect class="st24" x="148" y="100" width="140" height="55" rx="8" ry="8"/>
+  <rect class="st31" x="156" y="110" width="26" height="20" rx="3" ry="3"/>
+  <rect class="st17" x="160" y="114" width="14" height="10" rx="2" ry="2"/>
+  <circle class="st17" cx="168" cy="126" r="3"/>
+  <circle class="st17" cx="175" cy="126" r="3"/>
+  <text class="st0" transform="translate(192 121)"><tspan x="0" y="0">Logistics</tspan></text>
+  <text class="st0" transform="translate(192 133)"><tspan x="0" y="0">Coordination</tspan></text>
+  <text class="st10" transform="translate(192 147)"><tspan x="0" y="0">Shared transport routes</tspan></text>
+  <rect class="st23" x="148" y="165" width="140" height="55" rx="8" ry="8"/>
+  <rect class="st32" x="156" y="175" width="26" height="20" rx="3" ry="3"/>
+  <rect class="st6" x="161" y="179" width="16" height="12" rx="2" ry="2"/>
+  <path class="st26" d="M165,183l6-6,6,6"/>
+  <text class="st0" transform="translate(192 186)"><tspan x="0" y="0">Aggregated</tspan></text>
+  <text class="st0" transform="translate(192 198)"><tspan x="0" y="0">Collection</tspan></text>
+  <text class="st10" transform="translate(192 212)"><tspan x="0" y="0">Joint waste collection</tspan></text>
+  <text class="st14" transform="translate(339.74 42)"><tspan x="0" y="0">Implementation Phases</tspan></text>
+  <polygon class="st19" points="310 58 470 58 480 82 470 106 310 106 320 82 310 58"/>
+  <text class="st11" transform="translate(374.1 77)"><tspan x="0" y="0">Phase 1</tspan></text>
+  <text class="st4" transform="translate(372.22 92)"><tspan x="0" y="0">Quick-wins</tspan></text>
+  <polygon class="st3" points="310 115 470 115 480 139 470 163 310 163 320 139 310 115"/>
+  <text class="st11" transform="translate(374.1 134)"><tspan x="0" y="0">Phase 2</tspan></text>
+  <text class="st4" transform="translate(359.69 149)"><tspan x="0" y="0">Platform adoption</tspan></text>
+  <polygon class="st8" points="310 172 470 172 480 196 470 220 310 220 320 196 310 172"/>
+  <text class="st11" transform="translate(374.1 191)"><tspan x="0" y="0">Phase 3</tspan></text>
+  <text class="st4" transform="translate(350.49 206)"><tspan x="0" y="0">System transformation</tspan></text>
+  <path class="st12" d="M288,62l22,20"/>
+  <path class="st18" d="M288,127l22,12"/>
+  <path class="st7" d="M288,192l22,4"/>
+  <path class="st5" d="M142,245h226c6.63,0,12,5.37,12,12h0c0,6.63-5.37,12-12,12h-226c-6.63,0-12-5.37-12-12h0c0-6.63,5.37-12,12-12Z"/>
+  <text class="st21" transform="translate(159.46 261)"><tspan x="0" y="0">From catalogue to phased implementation</tspan></text>
+</svg>
